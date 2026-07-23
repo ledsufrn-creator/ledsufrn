@@ -858,8 +858,8 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
 }
 .apoia-card:hover{opacity:1;}
 .apoia-card img{max-height:56px;width:auto;filter:grayscale(100%) brightness(0.55);opacity:1;transition:all .3s;}
-.apoia-card:nth-child(3) img{max-height:80px;}/* Leite Rivas — logo horizontal com texto fino */
-.apoia-card:hover img{filter:none;}
+.apoia-card:nth-child(3) img{max-height:80px;mix-blend-mode:multiply;}
+.apoia-card:hover img{filter:none;mix-blend-mode:normal;}
 .apoia-placeholder{
   font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--muted);text-align:center;
