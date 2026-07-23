@@ -332,6 +332,7 @@ section{padding:120px 0;}
   width:100%;aspect-ratio:4/5;object-fit:cover;
   background:var(--navy-soft);
   filter:none;
+  border-radius:0;
 }
 .membro-info{padding:18px 0 0;}
 .membro-role{
@@ -918,7 +919,8 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
    ========================================================================== */
 
 @media (max-width:860px){
-  section{padding:80px 0;}
+  section{padding:72px 0;}
+  .section-head{margin-bottom:48px;}
   .nav-links{
     position:fixed;top:64px;left:0;right:0;background:var(--cream);
     flex-direction:column;padding:28px 32px;gap:22px;
@@ -935,40 +937,63 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .nav-dropdown-menu a{padding:0;font-size:13px;color:var(--navy-soft);}
   .hero{grid-template-columns:1fr;padding:150px 0 80px;gap:56px;}
   .sobre-grid{grid-template-columns:1fr;gap:44px;}
+  .sobre-grid h2{font-size:clamp(28px,7vw,44px);}
+  .preamble{padding:28px 24px;}
   .equipes-grid{grid-template-columns:1fr;}
   .equipe-card,.equipe-card:nth-child(even){padding:22px 0;border-left:none;}
   .iniciativas-grid{grid-template-columns:1fr;gap:0;}
   .iniciativa-card{border-top:none;border-bottom:1px solid var(--line);padding:22px 0;}
-  .apoia-grid{gap:48px;}
+  .apoia-grid{gap:40px;}
   .membros-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
+  .membro-photo{max-height:260px;}
   .conteudos-grid{grid-template-columns:1fr;gap:40px;}
   .footer-grid{grid-template-columns:1fr;gap:40px;}
   .eventos-grid{grid-template-columns:1fr;}
   .selecao-steps{grid-template-columns:repeat(2,1fr);}
+  .selecao-cta{flex-direction:column;align-items:flex-start;}
+  .edital-box{flex-direction:column;align-items:flex-start;}
   .evento-card.wide{grid-column:span 1;grid-template-columns:1fr;}
   .iniciativas-grid{grid-template-columns:1fr;}
   .outros-exp-item{grid-template-columns:1fr;gap:6px;}
+  .outros-exp{margin-top:48px;padding-top:40px;}
   .dropcap::first-letter{font-size:4em;}
   .hero-v2 .wrap{grid-template-columns:1fr;gap:40px;}
   .hero-v2 .brasao-bg{width:340px;right:-100px;top:80px;opacity:0.06;}
   .hero-featured{padding-top:70px;}
-  .hero-featured .hf-inner{grid-template-columns:1fr;gap:32px;padding:32px 24px 24px;}
+  .hero-featured .hf-inner{grid-template-columns:1fr;gap:32px;padding:28px 20px 20px;}
   .hf-cover-wrap{order:-1;}
-  .hf-cover{width:min(220px,60%);transform:rotateY(-6deg) rotate(-1deg);}
+  .hf-cover{width:min(200px,55%);transform:rotateY(-6deg) rotate(-1deg);}
   .hero-featured::after{bottom:auto;top:50px;width:120px;height:90px;opacity:0.6;}
   .hf-bar{flex-direction:column;}
   .hf-bar a{clip-path:none!important;margin-right:0;padding:16px 24px;
     border-bottom:1px solid rgba(255,255,255,0.1);}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:40px 32px;}
-  .ig-grid{grid-template-columns:1fr;}
-  .apoia-grid{grid-template-columns:1fr;}
-  .instagram-section .section-head{flex-direction:column;align-items:flex-start;gap:24px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 24px;}
+  .stat-num{font-size:clamp(52px,12vw,90px);}
+  .ig-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .instagram-section .section-head{flex-direction:column;align-items:flex-start;gap:20px;}
   .eventos-cat-head{flex-direction:column;align-items:flex-start;gap:6px;}
+  .page-title{padding-bottom:44px;margin-bottom:44px;}
+  .breadcrumb{padding-top:100px;padding-bottom:28px;}
 }
 
 @media (max-width:480px){
+  .wrap{padding:0 18px;}
+  .wrap-narrow{padding:0 18px;}
+  section{padding:56px 0;}
+  .section-head{margin-bottom:36px;}
   .membros-grid{grid-template-columns:1fr;}
+  .membro-photo{max-height:300px;}
   .selecao-steps{grid-template-columns:1fr;}
+  .ig-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 16px;}
+  .stat-num{font-size:clamp(46px,13vw,72px);}
+  .page-title{padding-bottom:32px;margin-bottom:32px;}
+  .page-title h1{font-size:clamp(34px,9vw,52px);}
+  .breadcrumb{padding-top:90px;}
+  .hf-title{font-size:clamp(26px,7.5vw,38px);}
+  .hf-bar a{padding:14px 18px;font-size:10px;}
+  .apoia-grid{gap:32px;}
+  .eventos-cat{margin-top:40px;padding-top:40px;}
 }
 
 @media (prefers-reduced-motion: reduce){
