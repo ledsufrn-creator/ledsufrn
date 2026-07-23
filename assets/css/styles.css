@@ -453,3 +453,82 @@
   }
 
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+/* ==================================================
+   NAVEGAÇÃO EM TELAS — SEM ROLAGEM DO SITE INTEIRO
+   ================================================== */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  height: 100vh;
+  padding-top: 76px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Cada seção ocupa a área abaixo do menu */
+main > section {
+  height: calc(100vh - 76px);
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Tela inicial centralizada */
+main > .hero {
+  min-height: calc(100vh - 76px);
+}
+
+/* O footer vira a tela de contato */
+footer {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 76px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+/* O atributo hidden esconde as telas inativas */
+main > section[hidden],
+footer[hidden] {
+  display: none !important;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  main {
+    padding-top: 68px;
+  }
+
+  main > section,
+  footer {
+    height: calc(100vh - 68px);
+    max-height: calc(100vh - 68px);
+  }
+
+  footer {
+    top: 68px;
+  }
+
+  main > .hero {
+    min-height: calc(100vh - 68px);
+  }
+}
