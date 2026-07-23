@@ -331,10 +331,8 @@ section{padding:120px 0;}
 .membro-photo{
   width:100%;aspect-ratio:4/5;object-fit:cover;
   background:var(--navy-soft);
-  filter:grayscale(100%) contrast(1.05);
-  transition:filter .4s ease;
+  filter:none;
 }
-.membro-card:hover .membro-photo{filter:grayscale(0%) contrast(1);}
 .membro-info{padding:18px 0 0;}
 .membro-role{
   font-family:var(--mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;
