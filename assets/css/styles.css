@@ -952,7 +952,8 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .selecao-steps{grid-template-columns:repeat(2,1fr);}
   .selecao-cta{flex-direction:column;align-items:flex-start;}
   .edital-box{flex-direction:column;align-items:flex-start;}
-  .evento-card.wide{grid-column:span 1;grid-template-columns:1fr;}
+  .evento-card.wide{grid-column:span 1;display:block;}
+  .evento-card.wide .evento-photo{height:auto;aspect-ratio:4/3;min-height:0;}
   .iniciativas-grid{grid-template-columns:1fr;}
   .outros-exp-item{grid-template-columns:1fr;gap:6px;}
   .outros-exp{margin-top:48px;padding-top:40px;}
