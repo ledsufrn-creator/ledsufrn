@@ -3,63 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEDS — Liga de Estudos de Direito Empresarial e Societário</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>LEDS UFRN — Liga de Estudos de Direito Empresarial e Societário</title>
+<meta name="description" content="Liga de Estudos de Direito Empresarial e Societário da UFRN. Projeto de pesquisa e extensão em Direito Societário e Empresarial em Natal, RN.">
 <link rel="icon" type="image/png" href="assets/images/logo-nav.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+<!-- =========== SHARED HEADER — manter em sincronia com outras páginas =========== -->
 <header>
   <nav class="nav">
-    <a href="#top" class="logo"><img src="assets/images/logo-nav.png" alt="LEDS UFRN">LEDS<span>.</span></a>
+    <a href="/" class="logo">
+      <img class="logo-brasao" src="assets/images/logo-nav.png" alt="LEDS UFRN">
+      LEDS<span>.</span>
+    </a>
     <div class="nav-links" id="navLinks">
       <a href="#sobre">Sobre</a>
       <div class="nav-dropdown">
-        <a href="#diretoria">Nossa Equipe</a>
+        <a href="equipe/">Nossa Equipe</a>
         <div class="nav-dropdown-menu">
-          <a href="#coord-geral">Coordenação Geral</a>
-          <a href="#coord-dh">Desenvolvimento Humano</a>
-          <a href="#coord-eventos">Eventos</a>
-          <a href="#coord-midias">Mídias Sociais</a>
-          <a href="#coord-pesquisas">Pesquisas</a>
+          <a href="equipe/orientacao-e-gestao/">Orientação e Gestão</a>
+          <a href="equipe/coordenacao-geral/">Coordenação Geral</a>
+          <a href="equipe/desenvolvimento-humano/">Desenvolvimento Humano</a>
+          <a href="equipe/eventos/">Eventos</a>
+          <a href="equipe/midias-sociais/">Mídias Sociais</a>
+          <a href="equipe/pesquisas/">Pesquisas</a>
+          <a href="equipe/conselheiros/">Conselheiros</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <a href="#eventos">Eventos</a>
+        <a href="#eventos">Expedientes</a>
         <div class="nav-dropdown-menu">
-          <a href="#expedientes-externos">Expedientes Externos</a>
-          <a href="#expedientes-internos">Expedientes Internos</a>
+          <a href="#escritorios">Escritórios de Advocacia</a>
+          <a href="#empresas">Empresas · Visitas Técnicas</a>
         </div>
       </div>
-      <a href="#iniciativas">Iniciativas</a>
-      <a href="#conteudos">Conteúdos</a>
+      <a href="#instagram">Conteúdos</a>
+      <a href="#quem-apoia">Quem apoia</a>
       <a href="#selecao">Processo Seletivo</a>
       <a href="#contato" class="nav-cta">Fale conosco</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">≡</button>
   </nav>
 </header>
+<!-- =========== /SHARED HEADER =========== -->
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero wrap">
-    <div>
-      <div class="hero-eyebrow">Universidade Federal do Rio Grande do Norte</div>
-      <h1>Liga de Estudos de Direito <em>Empresarial</em> e Societário</h1>
-      <p>Nascemos da inquietação de quem queria ir além da sala de aula — e hoje conectamos a comunidade acadêmica e profissional ao universo do Direito Empresarial e Societário.</p>
-      <div class="hero-actions">
-        <a href="#sobre" class="btn-primary">Conheça a liga</a>
-        <a href="#eventos" class="btn-ghost">Próximos eventos</a>
+  <!-- HERO featured — carrossel estilo revista/BMA -->
+  <section class="hero-featured" id="top">
+    <div class="hf-inner">
+      <div>
+        <div class="hf-eyebrow">Liga de Estudos · UFRN · Natal / RN</div>
+        <div class="hf-category" id="hf-category">Projeto de Pesquisa e Extensão</div>
+        <h1 class="hf-title" id="hf-title">
+          A prática do Direito Empresarial<br>
+          <em>começa na sala de aula.</em>
+        </h1>
+        <p class="hf-subtitle" id="hf-subtitle">Conectamos estudantes de Direito ao universo do Direito Societário e Empresarial — expedientes com escritórios, visitas técnicas a empresas e produção científica.</p>
+        <a class="hf-cta" id="hf-cta" href="#sobre">Conheça a liga</a>
+        <div class="hf-dots">
+          <button class="hf-dot active" data-idx="0" aria-label="Slide 1"></button>
+          <button class="hf-dot" data-idx="1" aria-label="Slide 2"></button>
+          <button class="hf-dot" data-idx="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+      <div class="hf-cover-wrap">
+        <div class="hf-cover-accent"></div>
+        <img class="hf-cover" id="hf-cover" src="assets/images/post-cazetv-globo.webp" alt="Conteúdo do Instagram da LEDS">
+        <span class="hf-cover-badge" id="hf-badge">@ledsufrn</span>
       </div>
     </div>
-    <div class="preamble">
-      <div class="clause">Cláusula Preambular</div>
-      <p>"Promover a disseminação do conhecimento e contribuir para a formação e o aprimoramento da comunidade jurídica e acadêmica nas áreas de Direito Empresarial e Societário."</p>
-      <div class="sign">— Missão da LEDS UFRN</div>
+    <div class="hf-bar">
+      <a href="#sobre"><span class="hf-bar-num">§ I</span>Sobre a LEDS</a>
+      <a href="#eventos"><span class="hf-bar-num">§ II</span>Expedientes</a>
+      <a href="#selecao"><span class="hf-bar-num">§ III</span>Processo Seletivo</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="marginalia" style="margin-bottom:56px;"><span class="num">§</span>A LEDS em números</div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-num">20<span class="sub">membros atuais</span></span>
+          <div class="stat-label">Diretoria, coordenações,<br>assessorias e conselheiros</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">+50<span class="sub">envolvidos no total</span></span>
+          <div class="stat-label">Membros de mandatos<br>anteriores e atuais</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">+30<span class="sub">expedientes realizados</span></span>
+          <div class="stat-label">Externos com escritórios,<br>empresas e internos</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3<span class="sub">parceiros institucionais</span></span>
+          <div class="stat-label">Escritórios e empresas<br>que apoiam a liga</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -67,185 +113,183 @@
   <section class="sobre" id="sobre">
     <div class="wrap sobre-grid">
       <div>
-        <div class="clause">Cláusula Primeira — Identidade</div>
-        <h2 style="font-family:var(--serif);font-size:38px;color:var(--navy);font-weight:500;margin-bottom:20px;">O que é a LEDS?</h2>
-        <p>A LEDS é um projeto de Pesquisa e Extensão do curso de Direito da UFRN, criado a partir da inquietação de alunos diante da necessidade de um maior aprofundamento em Direito Empresarial e Societário na formação oferecida pela instituição.</p>
-        <p>Assim, o projeto busca ampliar o contato dos estudantes com a área, promovendo debates, pesquisas e atividades acadêmicas que aproximem a teoria da prática jurídica.</p>
-        <p>Ao longo do caminho, percebemos que o Direito Societário, isoladamente, já não comportava nossas ambições: decidimos, então, abranger todo o universo do Direito Empresarial. Somos a Liga de Estudos de Direito Empresarial e Societário (LEDS UFRN).</p>
+        <div class="marginalia"><span class="num">I.</span>Identidade</div>
+        <h2>O que é a LEDS?</h2>
+        <p class="dropcap">A LEDS é um <b>projeto de Pesquisa e Extensão</b> do curso de Direito da UFRN, criado a partir da inquietação de alunos diante da necessidade de um maior aprofundamento em Direito Empresarial e Societário na formação oferecida pela instituição.</p>
+        <p>Assim, o projeto busca <em>ampliar o contato dos estudantes com a área</em>, promovendo debates, pesquisas e atividades acadêmicas que aproximem a teoria da prática jurídica.</p>
+        <p>Ao longo do caminho, percebemos que o Direito Societário, isoladamente, já não comportava nossas ambições: decidimos, então, abranger todo o universo do Direito Empresarial. Somos a <b>Liga de Estudos de Direito Empresarial e Societário — LEDS UFRN</b>.</p>
+        <img class="sobre-photo" src="assets/images/ufrn-fachada.png" alt="Campus da UFRN">
       </div>
       <div>
         <ul class="principios">
-          <li><b>Fomentar o conhecimento teórico e prático</b> — palestras, workshops e seminários com profissionais renomados, e promoção de estudos de caso</li>
-          <li><b>Estimular o debate e a reflexão</b> — grupos de estudos, debates e mesas-redondas sobre Direito Societário</li>
-          <li><b>Divulgar e compartilhar conhecimentos</b> — produção acadêmica e oferecimento de treinamentos e capacitações</li>
+          <li><b>Fomentar o conhecimento teórico e prático</b>Palestras, workshops e seminários com profissionais renomados, e promoção de estudos de caso.</li>
+          <li><b>Estimular o debate e a reflexão</b>Grupos de estudos, debates e mesas-redondas sobre Direito Societário.</li>
+          <li><b>Divulgar e compartilhar conhecimentos</b>Produção acadêmica, oficinas e capacitações abertas à comunidade jurídica.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- DIRETORIA -->
-  <section class="diretoria" id="diretoria">
+  <!-- NOSSA EQUIPE — grade compacta que linka para páginas -->
+  <section class="diretoria" id="diretoria" style="background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="section-head">
-        <div class="clause">Cláusula Segunda — Administração</div>
+        <div class="marginalia"><span class="num">II.</span>Estrutura</div>
         <h2>Nossa Equipe</h2>
-        <p>A estrutura responsável pelas atividades e coordenadorias da liga neste mandato.</p>
-      </div>
-      <div class="professores-grid">
-        <div class="professor-card">
-          <img src="assets/images/professor-01.jpg" alt="Dr. André Elali">
-          <div>
-            <span class="role-tag">Professor Presidente / Orientador</span>
-            <h4>Dr. André Elali</h4>
-            <p>Advogado, sócio-fundador do André Elali Advogados e professor titular da UFRN. Especialista em Direito Tributário, mestre em Direito Político e Econômico e doutor em Direito Público, com estágios de pesquisa em centros como o Max-Planck-Institut, a Queen Mary University of London e a Universidade de Lisboa.</p>
-          </div>
-        </div>
-        <div class="professor-card">
-          <img src="assets/images/professor-02.jpg" alt="Dr. Luís André Negrelli">
-          <div>
-            <span class="role-tag">Presidente de Honra</span>
-            <h4>Dr. Luís André Negrelli</h4>
-            <p>Advogado, sócio do escritório Eizirik Advogados. Especialista em Direito Societário pela FGV/SP, doutor em Direito Comercial pela USP/SP e professor da FGV Direito SP e do IBMEC/SP. Pesquisador bolsista do Max-Planck-Institut, em Hamburgo, e professor visitante na Università degli Studi di Firenze, Itália.</p>
-          </div>
-        </div>
+        <p>A LEDS se organiza em sete frentes de trabalho — clique em cada uma para conhecer os membros.</p>
       </div>
 
-      <div class="coord-subhead">Coordenadorias</div>
-      <div class="coordenadorias-list">
-        <div class="coord-row" id="coord-geral">
-          <div class="coord-row-head">
-            <span class="clause-mini">§ Art. 1º</span>
+      <div class="equipes-grid">
+        <a class="equipe-card" href="equipe/orientacao-e-gestao/">
+          <div>
+            <div class="num">§ I</div>
+            <h3>Orientação e Gestão</h3>
+            <p>Professor orientador, presidência de honra e liderança institucional.</p>
+          </div>
+          <div class="go">Ver equipe →</div>
+        </a>
+        <a class="equipe-card" href="equipe/coordenacao-geral/">
+          <div>
+            <div class="num">§ II</div>
             <h3>Coordenação Geral</h3>
+            <p>Visão institucional, parcerias e gestão interna e externa do projeto.</p>
           </div>
-          <p>Responsável pela visão institucional da LEDS, pelas parcerias da liga e pela gestão interna e externa do projeto.</p>
-        </div>
-        <div class="coord-row" id="coord-dh">
-          <div class="coord-row-head">
-            <span class="clause-mini">§ Art. 2º</span>
+          <div class="go">Ver equipe →</div>
+        </a>
+        <a class="equipe-card" href="equipe/desenvolvimento-humano/">
+          <div>
+            <div class="num">§ III</div>
             <h3>Desenvolvimento Humano</h3>
+            <p>Cultura organizacional e bem-estar dos membros da liga.</p>
           </div>
-          <p>Cuida da cultura organizacional da liga e do desenvolvimento e bem-estar dos seus membros.</p>
-        </div>
-        <div class="coord-row" id="coord-eventos">
-          <div class="coord-row-head">
-            <span class="clause-mini">§ Art. 3º</span>
+          <div class="go">Ver equipe →</div>
+        </a>
+        <a class="equipe-card" href="equipe/eventos/">
+          <div>
+            <div class="num">§ IV</div>
             <h3>Eventos</h3>
+            <p>Organização de expedientes e participação em simpósios.</p>
           </div>
-          <p>Organiza os expedientes da liga e viabiliza a participação da LEDS em simpósios, seminários e eventos externos.</p>
-        </div>
-        <div class="coord-row" id="coord-midias">
-          <div class="coord-row-head">
-            <span class="clause-mini">§ Art. 4º</span>
+          <div class="go">Ver equipe →</div>
+        </a>
+        <a class="equipe-card" href="equipe/midias-sociais/">
+          <div>
+            <div class="num">§ V</div>
             <h3>Mídias Sociais</h3>
+            <p>Presença digital, visibilidade das atividades e posicionamento.</p>
           </div>
-          <p>Cuida da presença da LEDS nas redes sociais, dando visibilidade às atividades e fortalecendo o posicionamento da liga.</p>
-        </div>
-        <div class="coord-row" id="coord-pesquisas">
-          <div class="coord-row-head">
-            <span class="clause-mini">§ Art. 5º</span>
+          <div class="go">Ver equipe →</div>
+        </a>
+        <a class="equipe-card" href="equipe/pesquisas/">
+          <div>
+            <div class="num">§ VI</div>
             <h3>Pesquisas</h3>
+            <p>Produção científica — artigos, livro anual e debate acadêmico.</p>
           </div>
-          <p>Incentiva a produção científica dos membros — da escrita de artigos ao livro anual da LEDS — e contribui para o debate acadêmico em Direito Empresarial e Societário.</p>
-        </div>
+          <div class="go">Ver equipe →</div>
+        </a>
+        <a class="equipe-card" href="equipe/conselheiros/">
+          <div>
+            <div class="num">§ VII</div>
+            <h3>Conselheiros</h3>
+            <p>Aconselham as decisões estratégicas e institucionais da liga.</p>
+          </div>
+          <div class="go">Ver equipe →</div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- EVENTOS / EXPEDIENTES -->
+  <!-- EXPEDIENTES / EVENTOS -->
   <section id="eventos">
     <div class="wrap">
       <div class="section-head">
-        <div class="clause">Cláusula Terceira — Expedientes Externos</div>
+        <div class="marginalia"><span class="num">III.</span>Expedientes</div>
         <h2>Expedientes Externos</h2>
-        <p>Os Expedientes Externos são encontros nos quais profissionais do Direito e professores dialogam com os membros sobre temas de Direito Empresarial e Societário — por meio de exposições teóricas ou da análise de casos concretos.</p>
+        <p>Encontros nos quais profissionais e professores dialogam com os membros sobre temas de Direito Empresarial e Societário — por meio de exposições teóricas ou análise de casos concretos, seja com <em>escritórios de advocacia</em> ou visitas técnicas a <em>empresas</em>.</p>
       </div>
 
-      <div class="eventos-grid" id="expedientes-externos">
-        <div class="evento-card wide">
-          <img src="assets/images/evento-01.jpg" alt="Expediente sobre dissolução parcial de sociedades" class="evento-photo">
-          <div class="evento-body">
-            <span class="evento-tag">Expediente</span>
-            <h4>Resolução de conflitos na Junta Comercial: análise casuística da dissolução parcial de sociedades</h4>
-            <p>Com Dr. André Santa Cruz e Dra. Amanda Mesquita — uma análise prática da dissolução parcial de sociedades, abordando a competência das Juntas Comerciais, o direito de retirada, a apuração de haveres do sócio retirante, o papel do DREI e os procedimentos de registro empresarial.</p>
-            <div class="evento-meta"><span>[Data]</span></div>
-          </div>
+      <!-- CATEGORIA: ESCRITÓRIOS -->
+      <div class="eventos-cat" id="escritorios">
+        <div class="eventos-cat-head">
+          <h3>Escritórios de Advocacia</h3>
+          <span class="cat-tag">§ 3.1</span>
         </div>
-        <div class="evento-card">
-          <img src="assets/images/evento-02.jpg" alt="Visita técnica Hospital Memorial" class="evento-photo">
-          <div class="evento-body">
-            <span class="evento-tag">Visita técnica</span>
-            <h4>Estrutura societária e compliance — case Hospital Memorial</h4>
-            <p>Convite do Dr. Hindenberg Dutra para conhecer um case de sucesso junto à equipe do Hospital Memorial — organização societária, modelo de gestão e práticas de compliance voltadas à segurança jurídica e administrativa.</p>
-            <div class="evento-meta"><span>[Data]</span></div>
+        <div class="eventos-grid">
+          <div class="evento-card wide">
+            <img src="assets/images/evento-santa-cruz-2.webp" alt="Expediente com André Santa Cruz e Amanda Mesquita" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Expediente</span>
+              <h4>Resolução de conflitos na Junta Comercial: análise casuística da dissolução parcial de sociedades</h4>
+              <p>Com <b>Dr. André Santa Cruz</b> e <b>Dra. Amanda Mesquita</b> — uma análise prática da dissolução parcial de sociedades, abordando a competência das Juntas Comerciais, o direito de retirada, a apuração de haveres do sócio retirante, o papel do DREI e os procedimentos de registro empresarial.</p>
+            </div>
           </div>
-        </div>
-        <div class="evento-card">
-          <img src="assets/images/evento-03.jpg" alt="Expediente sobre contabilidade" class="evento-photo">
-          <div class="evento-body">
-            <span class="evento-tag">Expediente</span>
-            <h4>Noções introdutórias de Contabilidade</h4>
-            <p>Com Anderson Dantas e Carlos Braga, da Braga e Dantas Advogados — contabilidade aplicada ao Direito Empresarial e Societário, com abordagem tributária: balanço patrimonial, DRE, DFC, valuation e escrituração fiscal (ECD, ECF, EFD).</p>
-            <div class="evento-meta"><span>[Data]</span></div>
+          <div class="evento-card">
+            <img src="assets/images/evento-marcelo-lauar.webp" alt="Expediente com Marcelo Lauar" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Expediente</span>
+              <h4>Acordo de Sócios</h4>
+              <p>Com <b>Prof. Marcelo Lauar</b> — instrumentos e cláusulas centrais do acordo de sócios, com foco em startups e sociedades de capital fechado.</p>
+            </div>
           </div>
-        </div>
-        <div class="evento-card">
-          <img src="assets/images/evento-04.jpg" alt="Palestra Apuração de Haveres" class="evento-photo">
-          <div class="evento-body">
-            <span class="evento-tag">Palestra</span>
-            <h4>Apuração de Haveres: Critérios Científicos e Standards de Controle Judicial</h4>
-            <p>Palestra com Dr. Gabriel Martins de Araújo sobre os critérios técnicos e os parâmetros de controle judicial aplicados à apuração de haveres em dissoluções societárias.</p>
-            <div class="evento-meta"><span>[Data]</span></div>
+          <div class="evento-card">
+            <img src="assets/images/evento-arthur-araujo.webp" alt="Expediente com Arthur Araújo — LBA" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Expediente</span>
+              <h4>Estrutura de Governança das Sociedades Anônimas</h4>
+              <p>Com <b>Dr. Arthur Araújo</b>, da LBA Advogados e Conselheiro da LEDS — órgãos das S.A., governança corporativa e o papel dos acordos de acionistas.</p>
+            </div>
           </div>
-        </div>
-        <div class="evento-card">
-          <img src="assets/images/evento-05.jpg" alt="Palestra com LBA Advogados" class="evento-photo">
-          <div class="evento-body">
-            <span class="evento-tag">Parceria</span>
-            <h4>Noções iniciais e natureza do direito societário</h4>
-            <p>Com Arthur Araújo, da LBA Advogados — os fundamentos e a natureza jurídica do Direito Societário na prática do mercado.</p>
-            <div class="evento-meta"><span>[Data]</span></div>
+          <div class="evento-card">
+            <img src="assets/images/evento-03.jpg" alt="Expediente com Braga e Dantas Advogados" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Expediente</span>
+              <h4>Noções introdutórias de Contabilidade</h4>
+              <p>Com <b>Anderson Dantas</b> e <b>Carlos Braga</b>, da Braga e Dantas Advogados — contabilidade aplicada ao Direito Empresarial: balanço patrimonial, DRE, DFC, valuation e escrituração fiscal (ECD, ECF, EFD).</p>
+            </div>
+          </div>
+          <div class="evento-card">
+            <img src="assets/images/evento-04.jpg" alt="Palestra com Dr. Gabriel Martins" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Palestra</span>
+              <h4>Apuração de Haveres: critérios científicos e standards de controle judicial</h4>
+              <p>Palestra com <b>Dr. Gabriel Martins de Araújo</b> sobre os critérios técnicos e os parâmetros de controle judicial aplicados à apuração de haveres em dissoluções societárias.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- OUTROS EXPEDIENTES -->
-      <div class="outros-exp">
-        <h3>Outros expedientes</h3>
-        <div class="outros-exp-item">
-          <div>
-            <b>Thaís Gasparian</b><span class="oe-firm">Sócia/Partner de Corporate &amp; M&amp;A do Mattos Filho</span>
-          </div>
-          <div class="oe-topic">Aspectos Práticos dos Contratos de Compra e Venda de Participações Societárias</div>
+      <!-- CATEGORIA: EMPRESAS -->
+      <div class="eventos-cat" id="empresas">
+        <div class="eventos-cat-head">
+          <h3>Empresas · Visitas Técnicas</h3>
+          <span class="cat-tag">§ 3.2</span>
         </div>
-        <div class="outros-exp-item">
-          <div>
-            <b>André Ziccardi de Carvalho</b><span class="oe-firm">Lefosse Advogados</span>
+        <div class="eventos-grid">
+          <div class="evento-card">
+            <img src="assets/images/evento-02.jpg" alt="Visita técnica ao Hospital Memorial" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Visita técnica</span>
+              <h4>Hospital Memorial — estrutura societária e compliance</h4>
+              <p>Convite do <b>Dr. Hindenberg Dutra</b> para conhecer um case junto à equipe do Hospital Memorial: organização societária, modelo de gestão e práticas de compliance voltadas à segurança jurídica e administrativa.</p>
+            </div>
           </div>
-          <div class="oe-topic">Overview do Processo de M&amp;A</div>
-        </div>
-        <div class="outros-exp-item">
-          <div>
-            <b>Arthur Araújo</b><span class="oe-firm">LBA Advogados</span>
+          <div class="evento-card">
+            <img src="assets/images/evento-gentil-negocios.webp" alt="Visita à Gentil Negócios" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Visita técnica</span>
+              <h4>Gentil Negócios</h4>
+              <p>Conversa com a liderança da <b>Gentil Negócios</b> sobre cultura organizacional, valores e como o direito estrutura decisões estratégicas no dia a dia da empresa.</p>
+            </div>
           </div>
-          <div class="oe-topic">Noções iniciais e natureza do direito societário</div>
-        </div>
-        <div class="outros-exp-item">
-          <div>
-            <b>Marcelo Lauar Leite</b>
+          <div class="evento-card">
+            <img src="assets/images/evento-05.jpg" alt="Grupo Edificare" class="evento-photo">
+            <div class="evento-body">
+              <span class="evento-tag">Visita técnica</span>
+              <h4>Grupo Edificare — Bastidores da Energia</h4>
+              <p>Com <b>Gibran Lula</b>, CEO do Grupo Edificare — "Como uma holding operacional otimiza resultados": estrutura societária, gestão de riscos e o papel jurídico na operação de uma holding no setor de energia.</p>
+            </div>
           </div>
-          <div class="oe-topic">Acordo de sócios para startups</div>
-        </div>
-        <div class="outros-exp-item">
-          <div>
-            <b>Henrique Arake</b><span class="oe-firm">Arake Tomazette Advogados Associados</span>
-          </div>
-          <div class="oe-topic">Sociedades anônimas: conceitos introdutórios, órgãos e governança corporativa</div>
-        </div>
-        <div class="outros-exp-item">
-          <div>
-            <b>Allan Turano</b><span class="oe-firm">S.A.F Botafogo</span>
-          </div>
-          <div class="oe-topic">Governança para empresas de alto crescimento: como preparar a estrutura societária para receber rodadas de investimento e o papel dos acordos de acionistas na proteção de minoritários e fundadores</div>
         </div>
       </div>
     </div>
@@ -255,14 +299,55 @@
   <section class="internos" id="expedientes-internos">
     <div class="wrap">
       <div class="section-head">
-        <div class="clause">Cláusula Quarta — Expedientes Internos</div>
+        <div class="marginalia"><span class="num">IV.</span>Expedientes Internos</div>
         <h2>Expedientes Internos</h2>
-        <p>Encontros periódicos voltados ao aprofundamento acadêmico, capacitação e integração dos membros — nos quais os próprios integrantes da LEDS ministram aulas, apresentações e discussões sobre temas relevantes do Direito Empresarial e Societário, estimulando o protagonismo acadêmico e a formação técnica dentro da liga.</p>
+        <p>Encontros voltados ao aprofundamento acadêmico, capacitação e integração dos membros — nos quais os próprios integrantes da LEDS ministram aulas, apresentações e discussões sobre temas relevantes, estimulando o protagonismo acadêmico e a formação técnica dentro da liga.</p>
       </div>
-      <div class="internos-example">
-        <span class="internos-tag">Exemplo</span>
-        <h4>Fundamentos do Direito Empresarial e a Teoria da Empresa</h4>
-        <p>Conduzido pelo membro Raio Avelino, um dos fundadores da LEDS.</p>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram-section" id="instagram">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-text">
+          <div class="marginalia"><span class="num">V.</span>Produção Intelectual</div>
+          <h2>Conteúdos no Instagram</h2>
+          <p>Análises jurídicas, casos práticos e discussões de Direito Empresarial e Societário publicadas semanalmente no Instagram da LEDS.</p>
+        </div>
+        <a class="section-head-cta" href="https://instagram.com/ledsufrn" target="_blank" rel="noopener">Seguir @ledsufrn</a>
+      </div>
+      <div class="ig-grid">
+        <a class="ig-card" href="https://www.instagram.com/p/Da8SGWQkWuy/" target="_blank" rel="noopener">
+          <span class="ig-badge">Direito Empresarial</span>
+          <img src="assets/images/post-cazetv-globo.webp" alt="Copa do Mundo, Contratos e Streaming — o caso CazéTV e Globo">
+          <div class="ig-overlay"><span class="ig-cta">Abrir post no Instagram</span></div>
+        </a>
+        <a class="ig-card" href="https://www.instagram.com/p/Da3johoDC51/" target="_blank" rel="noopener">
+          <span class="ig-badge">Fundos · CVM</span>
+          <img src="assets/images/post-cvm175.webp" alt="Resolução CVM 175: a Resolução dos Fundos">
+          <div class="ig-overlay"><span class="ig-cta">Abrir post no Instagram</span></div>
+        </a>
+        <a class="ig-card" href="https://www.instagram.com/p/DZqVLgKD-o0/" target="_blank" rel="noopener">
+          <span class="ig-badge">STJ · Direito Societário</span>
+          <img src="assets/images/post-stock-options.webp" alt="STJ decidiu: stock options são de natureza mercantil">
+          <div class="ig-overlay"><span class="ig-cta">Abrir post no Instagram</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM APOIA -->
+  <section class="quem-apoia" id="quem-apoia">
+    <div class="wrap">
+      <div class="apoia-head">
+        <div class="marginalia"><span class="num">VI.</span>Parceiros</div>
+        <h3>Quem apoia a LEDS</h3>
+      </div>
+      <div class="apoia-grid">
+        <div class="apoia-card"><img src="assets/images/parceiro-db-advogados.png" alt="DB Advogados"></div>
+        <div class="apoia-card"><img src="assets/images/parceiro-lba-advogados.png" alt="LBA — Luz Bezerra Araújo Aguiar Advogados"></div>
+        <div class="apoia-card"><img src="assets/images/parceiro-leite-rivas.png" alt="Leite Rivas Advogados"></div>
       </div>
     </div>
   </section>
@@ -271,33 +356,35 @@
   <section id="iniciativas" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="section-head">
-        <div class="clause">Cláusula Quinta — Outras Iniciativas</div>
+        <div class="marginalia"><span class="num">VII.</span>Outras Iniciativas</div>
         <h2>Outras iniciativas da LEDS</h2>
       </div>
       <div class="iniciativas-grid">
         <div class="iniciativa-card">
+          <div class="num">§ I</div>
           <h4>Produção de artigos científicos</h4>
           <p>Elaboração e desenvolvimento de artigos acadêmicos, promovendo o aprofundamento em temas relevantes, o pensamento crítico e a pesquisa jurídica.</p>
         </div>
         <div class="iniciativa-card">
+          <div class="num">§ II</div>
           <h4>Livro anual</h4>
           <p>Anualmente, a LEDS organiza a publicação de um livro acadêmico, reunindo produções científicas desenvolvidas por seus membros.</p>
         </div>
         <div class="iniciativa-card">
+          <div class="num">§ III</div>
           <h4>Oficinas práticas</h4>
-          <p>Oficinas voltadas ao Direito Societário e Empresarial, para aplicar conhecimentos teóricos em situações próximas à realidade profissional.</p>
+          <p>Oficinas voltadas ao Direito Societário e Empresarial, aplicando conhecimentos teóricos em situações próximas à realidade profissional.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTEÚDOS -->
-  <section class="conteudos" id="conteudos">
+  <section class="conteudos">
     <div class="wrap">
       <div class="section-head">
-        <div class="clause">Cláusula Sexta — Produção Intelectual</div>
-        <h2>Conteúdos</h2>
-        <p>Artigos, análises e opiniões produzidos por membros da liga.</p>
+        <div class="marginalia"><span class="num">VIII.</span>Publicações</div>
+        <h2>Livro anual da LEDS</h2>
       </div>
       <div class="conteudos-em-construcao">
         <div class="cec-icon">§</div>
@@ -311,80 +398,35 @@
   <section class="selecao" id="selecao">
     <div class="wrap">
       <div class="section-head">
-        <div class="clause">Cláusula Sétima — Processo Seletivo</div>
+        <div class="marginalia"><span class="num">IX.</span>Processo Seletivo</div>
         <h2>Faça parte da LEDS</h2>
-        <p>[Texto de chamada — ex: A cada semestre, a LEDS abre um novo processo seletivo para estudantes de Direito da UFRN interessados em Direito Empresarial e Societário.]</p>
-      </div>
-      <div class="selecao-steps">
-        <div class="selecao-step">
-          <div class="step-num">01</div>
-          <h4>Inscrições</h4>
-          <p>[Preencher formulário de inscrição dentro do período divulgado.]</p>
-        </div>
-        <div class="selecao-step">
-          <div class="step-num">02</div>
-          <h4>Carta de apresentação</h4>
-          <p>Novidade deste semestre: no lugar do mini-artigo de 2 páginas, os candidatos escrevem uma carta de apresentação. [Detalhar tema ou diretrizes da carta.]</p>
-        </div>
-        <div class="selecao-step">
-          <div class="step-num">03</div>
-          <h4>Entrevista</h4>
-          <p>[Conversa com membros da diretoria sobre motivação e disponibilidade.]</p>
-        </div>
-        <div class="selecao-step">
-          <div class="step-num">04</div>
-          <h4>Resultado</h4>
-          <p>[Divulgação dos aprovados e integração à liga.]</p>
-        </div>
-      </div>
-      <div class="selecao-cta">
-        <p>[Período de inscrições: DD/MM a DD/MM]</p>
-        <a href="#" class="btn-primary">Inscreva-se</a>
+        <p>A cada início de semestre da UFRN, a LEDS abre um <em>novo processo seletivo</em> para estudantes de Direito. Estudantes de outras instituições também podem se inscrever — desde que consigam participar presencialmente das nossas atividades em Natal.</p>
       </div>
       <div class="edital-box">
         <div>
-          <span class="edital-tag">Documento oficial</span>
-          <h4>Edital do Processo Seletivo</h4>
-          <p>Consulte as regras completas, critérios de avaliação e cronograma detalhado.</p>
+          <span class="edital-tag">Como participar</span>
+          <h4>Acompanhe as inscrições pelo Instagram</h4>
+          <p>Cada edital, suas regras e prazos são divulgados diretamente no <b>@ledsufrn</b> no início de cada semestre.</p>
         </div>
-        <a href="edital.pdf" target="_blank" class="btn-ghost-light">Baixar edital (PDF)</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <div class="wrap">
-      <div class="newsletter-box">
-        <div>
-          <h3>Receba nossos conteúdos por e-mail</h3>
-          <p>Artigos, eventos e novidades da LEDS direto na sua caixa de entrada.</p>
-        </div>
-        <div>
-          <form class="newsletter-form" onsubmit="return false;">
-            <input type="email" placeholder="Seu e-mail" required>
-            <button type="submit">Inscrever-se</button>
-          </form>
-          <div class="newsletter-note">Sem spam. Cancele quando quiser.</div>
-        </div>
+        <a href="https://instagram.com/ledsufrn" target="_blank" rel="noopener" class="btn-ghost-light">Seguir @ledsufrn</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- CONTATO / FOOTER -->
+<!-- =========== SHARED FOOTER — manter em sincronia com outras páginas =========== -->
 <footer id="contato">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/images/logo-footer.png" alt="LEDS UFRN — Liga de Estudos de Direito Empresarial e Societário" class="footer-logo">
-        <p>Liga de Estudos de Direito Empresarial e Societário — Universidade Federal do Rio Grande do Norte.</p>
+        <img src="assets/images/logo-nav.png" alt="LEDS UFRN" class="footer-brasao">
+        <p>Liga de Estudos de Direito Empresarial e Societário — Universidade Federal do Rio Grande do Norte. Projeto de pesquisa e extensão do curso de Direito.</p>
       </div>
       <div class="footer-col">
         <h5>Contato</h5>
         <a href="mailto:ledsufrn@gmail.com">ledsufrn@gmail.com</a>
-        <p>Natal, RN</p>
+        <p>Natal / RN</p>
       </div>
       <div class="footer-col">
         <h5>Redes</h5>
@@ -393,12 +435,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 LEDS UFRN. Todos os direitos reservados.</span>
+      <span>© 2026 LEDS UFRN — Todos os direitos reservados.</span>
     </div>
   </div>
 </footer>
+<!-- =========== /SHARED FOOTER =========== -->
 
 <script src="assets/js/script.js" defer></script>
-
 </body>
 </html>
