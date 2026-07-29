@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Equipes — lista editorial sem molduras
+   ========================================================================== */
+
+.equipe-index{
+  margin-top:16px;
+  border-top:1px solid var(--line);
+  max-width:720px;
+}
+.equipe-index-item{
+  display:block;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+  transition:padding-left .25s ease;
+}
+.equipe-index-item:hover{padding-left:10px;}
+.equipe-index-name{
+  font-family:var(--serif);font-size:19px;color:var(--navy);font-weight:500;
+  letter-spacing:-0.005em;transition:color .2s;
+}
+.equipe-index-item:hover .equipe-index-name{color:var(--bordeaux);}
+.equipe-index-desc{font-size:14.5px;color:var(--navy-soft);line-height:1.6;}

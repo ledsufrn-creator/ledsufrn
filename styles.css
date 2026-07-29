@@ -138,6 +138,8 @@ header{
   background:var(--navy);transition:width .3s ease;
 }
 .nav-links a:hover::after{width:100%;}
+.nav-links a.active::after{width:100%;background:var(--bordeaux);}
+.nav-links a.active{color:var(--bordeaux);}
 
 .nav-links a.nav-cta{
   border:1px solid var(--navy);color:var(--navy)!important;
@@ -918,7 +920,9 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
    Mobile
    ========================================================================== */
 
-@media (max-width:1100px){
+@media (max-width:860px){
+  section{padding:72px 0;}
+  .section-head{margin-bottom:48px;}
   .nav-links{
     position:fixed;top:64px;left:0;right:0;background:var(--cream);
     flex-direction:column;padding:28px 32px;gap:22px;
@@ -933,11 +937,6 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
     display:flex;flex-direction:column;gap:12px;background:transparent;min-width:0;
   }
   .nav-dropdown-menu a{padding:0;font-size:13px;color:var(--navy-soft);}
-}
-
-@media (max-width:860px){
-  section{padding:72px 0;}
-  .section-head{margin-bottom:48px;}
   .hero{grid-template-columns:1fr;padding:150px 0 80px;gap:56px;}
   .sobre-grid{grid-template-columns:1fr;gap:44px;}
   .sobre-grid h2{font-size:clamp(28px,7vw,44px);}
