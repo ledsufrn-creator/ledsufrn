@@ -99,3 +99,20 @@ if (navToggle) {
 
   timer = setInterval(advance, 5500);
 })();
+
+// Seletor de categorias (página /conteudos/) — toca na aba, troca o painel
+(function () {
+  const tabs = document.querySelectorAll('.cat-tab');
+  if (!tabs.length) return;
+
+  const panels = document.querySelectorAll('.cat-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+})();

@@ -382,6 +382,36 @@ section{padding:120px 0;}
 }
 
 /* ==========================================================================
+   Seletor de categorias — abas verticais + painel de conteúdo
+   (usado na página /conteudos/)
+   ========================================================================== */
+
+.cat-tabs{display:flex;flex-direction:column;border:1px solid var(--line);}
+.cat-tab{
+  display:block;width:100%;text-align:left;appearance:none;
+  padding:20px 26px;font-family:var(--sans);font-weight:600;font-size:15px;
+  background:var(--cream-warm);color:var(--navy);
+  border:none;border-bottom:1px solid var(--line);border-left:4px solid transparent;
+  cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.cat-tab:last-child{border-bottom:none;}
+.cat-tab:hover{background:var(--cream);}
+.cat-tab.active{background:var(--navy);color:#fff;border-left-color:var(--gold-light);}
+
+.cat-panels{background:#fff;border:1px solid var(--line);border-top:none;padding:48px;}
+.cat-panel{display:none;}
+.cat-panel.active{display:block;animation:cat-fade .25s ease;}
+@keyframes cat-fade{from{opacity:0;}to{opacity:1;}}
+.cat-panel-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:32px;}
+.cat-panel h2{font-family:var(--serif);font-size:30px;color:var(--navy);font-weight:500;letter-spacing:-0.01em;}
+.cat-panel > p{color:var(--navy-soft);font-size:15.5px;line-height:1.65;max-width:620px;margin-bottom:28px;}
+
+@media (max-width:860px){
+  .cat-tab{padding:16px 20px;font-size:14px;}
+  .cat-panels{padding:32px 24px;}
+}
+
+/* ==========================================================================
    Eventos (mantido, com refinamentos)
    ========================================================================== */
 
