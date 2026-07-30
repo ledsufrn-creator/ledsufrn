@@ -187,6 +187,7 @@ header.is-scrolled{background:rgba(245,241,232,0.72);}
 }
 .nav-dropdown-menu a::after{display:none;}
 .nav-dropdown-menu a:hover{background:var(--cream-warm);color:var(--bordeaux);}
+.pipe-sep{display:inline-block;transform:scaleY(0.6);}
 
 /* ==========================================================================
    Hero
@@ -268,6 +269,12 @@ section{padding:120px 0;}
   color:var(--navy);letter-spacing:-0.015em;line-height:1.1;
 }
 .section-head p{margin-top:20px;color:var(--navy-soft);font-size:16.5px;max-width:620px;}
+.section-head-title .cat-tag{
+  display:block;margin-bottom:10px;
+  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--bordeaux);
+}
+.internos .section-head-title .cat-tag{color:#d98a8d;}
 .rule{border:none;border-top:1px solid var(--line);}
 
 /* ==========================================================================
@@ -421,23 +428,22 @@ section{padding:120px 0;}
    Eventos (mantido, com refinamentos)
    ========================================================================== */
 
-.eventos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;scroll-margin-top:100px;}
+.eventos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;scroll-margin-top:100px;}
 .evento-card{background:#fff;border:1px solid var(--line);overflow:hidden;transition:box-shadow .3s;}
 .evento-card:hover{box-shadow:0 20px 40px -20px rgba(4,44,73,0.18);}
-.evento-card.wide{grid-column:span 2;display:grid;grid-template-columns:1.1fr 1fr;}
+.evento-card.solo{grid-column:1/-1;justify-self:center;width:calc(50% - 8px);}
 .evento-photo{
-  width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--navy);
+  width:100%;aspect-ratio:16/8;object-fit:cover;display:block;background:var(--navy);
   filter:grayscale(100%) contrast(1.05);transition:filter .4s;
 }
 .evento-card:hover .evento-photo{filter:grayscale(0%);}
-.evento-card.wide .evento-photo{aspect-ratio:auto;height:100%;min-height:300px;}
-.evento-body{padding:32px 34px;display:flex;flex-direction:column;gap:12px;}
+.evento-body{padding:14px 16px;display:flex;flex-direction:column;gap:5px;}
 .evento-tag{
-  font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:0.14em;
+  font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.13em;
   text-transform:uppercase;color:var(--bordeaux);
 }
-.evento-body h4{font-family:var(--serif);font-size:24px;color:var(--navy);font-weight:500;line-height:1.25;letter-spacing:-0.005em;}
-.evento-body p{font-size:14.5px;color:var(--navy-soft);line-height:1.6;}
+.evento-body h4{font-family:var(--serif);font-size:18px;color:var(--navy);font-weight:500;line-height:1.24;letter-spacing:-0.005em;}
+.evento-body p{font-size:13.5px;color:var(--navy-soft);line-height:1.55;}
 .evento-meta{
   margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);
   font-family:var(--mono);letter-spacing:0.06em;
@@ -929,10 +935,6 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   font-family:var(--serif);font-size:32px;color:var(--navy);font-weight:500;
   letter-spacing:-0.01em;
 }
-.eventos-cat-head .cat-tag{
-  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--bordeaux);
-}
 
 /* remove hover=color já que agora estamos usando fotos coloridas nos eventos */
 .evento-card .evento-photo{filter:none;}
@@ -991,20 +993,22 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .sobre-grid h2{font-size:clamp(28px,7vw,44px);}
   .preamble{padding:28px 24px;}
   .equipes-grid{grid-template-columns:1fr;}
-  .equipe-card,.equipe-card:nth-child(even){padding:22px 0;border-left:none;}
+  .equipe-card:nth-child(even){border-left:none;}
   .iniciativas-grid{grid-template-columns:1fr;gap:0;}
   .iniciativa-card{border:none;border-bottom:1px solid var(--line);padding:22px 0;}
   .apoia-grid{gap:40px;}
-  .membros-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
-  .membro-photo{max-height:260px;}
+  .membros-grid,
+  .equipe-page .membros-grid,
+  .page-pesquisas .membros-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
+  .membro-photo,
+  .page-pesquisas .membro-photo{max-height:260px;}
   .conteudos-grid{grid-template-columns:1fr;gap:40px;}
   .footer-grid{grid-template-columns:1fr;gap:40px;}
   .eventos-grid{grid-template-columns:1fr;}
   .selecao-steps{grid-template-columns:repeat(2,1fr);}
   .selecao-cta{flex-direction:column;align-items:flex-start;}
   .edital-box{flex-direction:column;align-items:flex-start;}
-  .evento-card.wide{grid-column:span 1;display:block;}
-  .evento-card.wide .evento-photo{height:auto;aspect-ratio:4/3;min-height:0;}
+  .evento-card.solo{width:auto;}
   .iniciativas-grid{grid-template-columns:1fr;}
   .outros-exp-item{grid-template-columns:1fr;gap:6px;}
   .outros-exp{margin-top:48px;padding-top:40px;}
@@ -1033,8 +1037,11 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .wrap-narrow{padding:0 18px;}
   section{padding:56px 0;}
   .section-head{margin-bottom:36px;}
-  .membros-grid{grid-template-columns:1fr;}
-  .membro-photo{max-height:300px;}
+  .membros-grid,
+  .equipe-page .membros-grid,
+  .page-pesquisas .membros-grid{grid-template-columns:1fr;}
+  .membro-photo,
+  .page-pesquisas .membro-photo{max-height:300px;}
   .selecao-steps{grid-template-columns:1fr;}
   .ig-grid{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 16px;}
