@@ -1,9 +1,39 @@
+// Header: fica um pouco mais transparente ao rolar a página
+(function () {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  function updateHeaderScroll() {
+    header.classList.toggle('is-scrolled', window.scrollY > 12);
+  }
+
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
+})();
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-if (navToggle) {
-  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+function closeMobileMenu() {
+  if (!navLinks || !navToggle) return;
+  navLinks.classList.remove('open');
+  navToggle.textContent = '≡';
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Abrir menu');
+  document.body.classList.remove('nav-open');
+}
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.textContent = isOpen ? '×' : '≡';
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+  window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMobileMenu(); });
 }
 
 // Hero carousel
@@ -14,7 +44,7 @@ if (navToggle) {
       title: 'A prática do Direito Empresarial<br><em>começa na sala de aula.</em>',
       subtitle: 'Conectamos estudantes de Direito ao universo do Direito Societário e Empresarial — expedientes com escritórios, visitas técnicas a empresas e produção científica.',
       ctaText: 'Conheça a liga',
-      ctaHref: '#sobre',
+      ctaHref: '/sobre/',
       cover: 'assets/images/post-cazetv-globo.webp',
       coverAlt: 'Copa do Mundo, Contratos e Streaming — caso CazéTV e Globo',
       badge: '@ledsufrn',
@@ -84,4 +114,51 @@ if (navToggle) {
   function advance() { goTo((current + 1) % slides.length); }
 
   timer = setInterval(advance, 5500);
+})();
+
+
+// Conteúdos: abas internas
+(function () {
+  const tabs = Array.from(document.querySelectorAll('.content-tab'));
+  if (!tabs.length) return;
+
+  const panels = Array.from(document.querySelectorAll('.content-tab-panel'));
+
+  function activateTab(tab, moveFocus = false) {
+    const target = tab.dataset.tab;
+
+    tabs.forEach((item) => {
+      const active = item === tab;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      const active = panel.id === `panel-${target}`;
+      panel.classList.toggle('active', active);
+      panel.hidden = !active;
+    });
+
+    if (moveFocus) tab.focus();
+    history.replaceState(null, '', `#${target}`);
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activateTab(tab));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let nextIndex = index;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = tabs.length - 1;
+      activateTab(tabs[nextIndex], true);
+    });
+  });
+
+  const requested = location.hash.replace('#', '');
+  const initial = tabs.find((tab) => tab.dataset.tab === requested) || tabs[0];
+  activateTab(initial);
 })();
