@@ -922,19 +922,43 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   section{padding:72px 0;}
   .section-head{margin-bottom:48px;}
   .nav-links{
-    position:fixed;top:64px;left:0;right:0;background:var(--cream);
-    flex-direction:column;padding:28px 32px;gap:22px;
+    position:fixed;top:64px;left:0;right:0;height:calc(100vh - 64px);background:var(--cream);
+    flex-direction:column;align-items:stretch;padding:12px 32px 28px;gap:4px;
     border-bottom:1px solid var(--line);
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
     transform:translateY(-130%);opacity:0;transition:all .25s ease;
   }
   .nav-links.open{transform:translateY(0);opacity:1;}
   .nav-toggle{display:block;}
-  .nav-dropdown-menu{
-    position:static;transform:none;opacity:1;visibility:visible;
-    box-shadow:none;border:none;padding:0 0 0 16px;margin-top:10px;
-    display:flex;flex-direction:column;gap:12px;background:transparent;min-width:0;
+  .nav-links > a, .nav-links > .nav-dropdown > a{
+    width:100%;text-align:left;padding:14px 0;
+    border-bottom:1px solid var(--line);
   }
-  .nav-dropdown-menu a{padding:0;font-size:13px;color:var(--navy-soft);}
+  .nav-links > a.nav-cta{
+    border:1px solid var(--navy);text-align:center;margin-top:16px;
+  }
+  .nav-dropdown{width:100%;}
+  .nav-dropdown > a{
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .nav-dropdown > a::after{
+    content:"+";font-size:16px;color:var(--bordeaux);transition:transform .2s;
+  }
+  .nav-dropdown.open > a::after{content:"–";}
+  .nav-dropdown-menu,
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu{
+    position:static;transform:none;visibility:visible;
+    box-shadow:none;border:none;padding:0 0 4px 16px;margin-top:0;
+    display:flex;flex-direction:column;gap:0;background:transparent;min-width:0;
+    max-height:0;overflow:hidden;opacity:1;transition:max-height .25s ease;
+  }
+  .nav-dropdown.open .nav-dropdown-menu{max-height:400px;}
+  .nav-dropdown-menu a{
+    padding:10px 0;font-size:13px;color:var(--navy-soft);
+    border-bottom:1px solid var(--line);text-align:left;
+  }
+  .nav-dropdown-menu a:last-child{border-bottom:none;}
   .hero{grid-template-columns:1fr;padding:150px 0 80px;gap:56px;}
   .sobre-grid{grid-template-columns:1fr;gap:44px;}
   .sobre-grid h2{font-size:clamp(28px,7vw,44px);}

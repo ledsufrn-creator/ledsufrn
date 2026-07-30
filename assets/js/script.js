@@ -3,7 +3,21 @@ const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 if (navToggle) {
   navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Nos submenus (Nossa Equipe / Expedientes), o toque no celular abre e
+  // fecha a listinha em vez de navegar direto — só os itens de dentro navegam.
+  navLinks.querySelectorAll('.nav-dropdown > a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      if (window.innerWidth <= 860) {
+        e.preventDefault();
+        a.closest('.nav-dropdown').classList.toggle('open');
+      }
+    });
+  });
+
+  navLinks.querySelectorAll('a:not(.nav-dropdown > a)').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
 }
 
 // Hero carousel
