@@ -319,6 +319,43 @@ section{padding:120px 0;}
 .equipe-card:hover .go{opacity:1;color:var(--bordeaux);}
 
 /* ==========================================================================
+   Frentes da LEDS — cartões numerados da página inicial
+   (ponto de entrada pras páginas: sobre, equipe, expedientes, etc.)
+   ========================================================================== */
+
+.frentes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:24px;}
+.frente-card{
+  position:relative;display:block;overflow:hidden;
+  background:var(--cream-warm);border:1px solid var(--line);border-left:4px solid var(--navy);
+  padding:26px 30px 32px;transition:box-shadow .25s ease,transform .25s ease;
+}
+.frente-card:hover{box-shadow:0 20px 44px -26px rgba(4,44,73,0.28);transform:translateY(-2px);}
+.frente-card.fc-bordeaux{border-left-color:var(--bordeaux);}
+.frente-card.fc-gold{border-left-color:var(--gold);}
+.fc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;}
+.fc-num{font-family:var(--serif);font-size:32px;color:var(--line-strong);font-weight:500;line-height:1;}
+.fc-arrow{
+  width:28px;height:28px;flex-shrink:0;border:1px solid var(--line-strong);
+  display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--navy);
+  transition:background .2s,color .2s;
+}
+.frente-card:hover .fc-arrow{background:var(--navy);color:#fff;}
+.fc-eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px;display:block;
+}
+.frente-card h3{font-family:var(--serif);font-size:22px;color:var(--navy);font-weight:500;margin-bottom:8px;letter-spacing:-0.005em;}
+.frente-card p{font-size:13.5px;color:var(--navy-soft);line-height:1.5;margin:0;}
+.frente-card::after{
+  content:"";position:absolute;right:0;bottom:0;width:24px;height:24px;
+  background:linear-gradient(135deg, transparent 50%, var(--line-strong) 50%);
+}
+
+@media (max-width:860px){
+  .frentes-grid{grid-template-columns:1fr;gap:20px;}
+}
+
+/* ==========================================================================
    Página de equipe — cards de membros (estilo escritório)
    ========================================================================== */
 
@@ -382,21 +419,21 @@ section{padding:120px 0;}
 }
 
 /* ==========================================================================
-   Seletor de categorias — abas verticais + painel de conteúdo
+   Seletor de categorias — abas lado a lado (empilham no celular) + painel
    (usado na página /conteudos/)
    ========================================================================== */
 
-.cat-tabs{display:flex;flex-direction:column;border:1px solid var(--line);}
+.cat-tabs{display:flex;flex-direction:row;border:1px solid var(--line);}
 .cat-tab{
-  display:block;width:100%;text-align:left;appearance:none;
-  padding:20px 26px;font-family:var(--sans);font-weight:600;font-size:15px;
+  display:block;flex:1;text-align:center;appearance:none;
+  padding:18px 20px;font-family:var(--sans);font-weight:600;font-size:14.5px;
   background:var(--cream-warm);color:var(--navy);
-  border:none;border-bottom:1px solid var(--line);border-left:4px solid transparent;
+  border:none;border-right:1px solid var(--line);border-bottom:3px solid transparent;
   cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease;
 }
-.cat-tab:last-child{border-bottom:none;}
+.cat-tab:last-child{border-right:none;}
 .cat-tab:hover{background:var(--cream);}
-.cat-tab.active{background:var(--navy);color:#fff;border-left-color:var(--gold-light);}
+.cat-tab.active{background:var(--navy);color:#fff;border-bottom-color:var(--gold-light);}
 
 .cat-panels{background:#fff;border:1px solid var(--line);border-top:none;padding:48px;}
 .cat-panel{display:none;}
@@ -407,7 +444,10 @@ section{padding:120px 0;}
 .cat-panel > p{color:var(--navy-soft);font-size:15.5px;line-height:1.65;max-width:620px;margin-bottom:28px;}
 
 @media (max-width:860px){
-  .cat-tab{padding:16px 20px;font-size:14px;}
+  .cat-tabs{flex-direction:column;}
+  .cat-tab{text-align:left;padding:16px 20px;font-size:14px;border-right:none;border-bottom:1px solid var(--line);border-left:4px solid transparent;}
+  .cat-tab:last-child{border-bottom:none;}
+  .cat-tab.active{border-left-color:var(--gold-light);border-bottom-color:var(--line);}
   .cat-panels{padding:32px 24px;}
 }
 

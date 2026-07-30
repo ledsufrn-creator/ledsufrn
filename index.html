@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 </head>
 <body>
 
@@ -109,127 +109,71 @@
     </div>
   </section>
 
-  <!-- SOBRE (resumo — texto completo em /sobre/) -->
-  <section class="sobre" id="sobre">
-    <div class="wrap-narrow">
-      <div class="marginalia"><span class="num">I.</span>Identidade</div>
-      <h2>O que é a LEDS?</h2>
-      <p class="dropcap">A LEDS é um <b>projeto de Pesquisa e Extensão</b> do curso de Direito da UFRN, criado a partir da inquietação de alunos diante da necessidade de um maior aprofundamento em Direito Empresarial e Societário na formação oferecida pela instituição.</p>
-      <a class="btn-arrow" href="sobre/">Conheça a história completa</a>
-    </div>
-  </section>
-
-  <!-- NOSSA EQUIPE — grade compacta que linka para páginas -->
-  <section class="diretoria" id="diretoria" style="background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <!-- CONHEÇA NOSSAS FRENTES — ponto de entrada único pras páginas do site -->
+  <section id="frentes" style="background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="section-head">
-        <div class="marginalia"><span class="num">II.</span>Estrutura</div>
-        <h2>Nossa Equipe</h2>
-        <p>A LEDS se organiza em sete frentes de trabalho — clique em cada uma para conhecer os membros.</p>
+        <div class="marginalia">§ Explore a LEDS</div>
+        <h2>Conheça nossas frentes</h2>
+        <p>A página inicial agora é um ponto de entrada. Escolha a área que deseja visitar.</p>
       </div>
 
-      <div class="equipes-grid">
-        <a class="equipe-card" href="equipe/orientacao-e-gestao/">
-          <div>
-            <div class="num">§ I</div>
-            <h3>Orientação e Gestão</h3>
-            <p>Professor orientador, presidência de honra e liderança institucional.</p>
+      <div class="frentes-grid">
+        <a class="frente-card fc-bordeaux" href="sobre/" id="sobre">
+          <div class="fc-top">
+            <span class="fc-num">01</span>
+            <span class="fc-arrow">↗</span>
           </div>
-          <div class="go">Ver equipe →</div>
+          <span class="fc-eyebrow">Institucional</span>
+          <h3>Sobre a LEDS</h3>
+          <p>Nossa história, identidade e objetivos acadêmicos.</p>
         </a>
-        <a class="equipe-card" href="equipe/coordenacao-geral/">
-          <div>
-            <div class="num">§ II</div>
-            <h3>Coordenação Geral</h3>
-            <p>Visão institucional, parcerias e gestão interna e externa do projeto.</p>
+        <a class="frente-card" href="equipe/">
+          <div class="fc-top">
+            <span class="fc-num">02</span>
+            <span class="fc-arrow">↗</span>
           </div>
-          <div class="go">Ver equipe →</div>
+          <span class="fc-eyebrow">Pessoas</span>
+          <h3>Nossa Equipe</h3>
+          <p>Orientação, coordenadorias, assessorias e conselheiros.</p>
         </a>
-        <a class="equipe-card" href="equipe/desenvolvimento-humano/">
-          <div>
-            <div class="num">§ III</div>
-            <h3>Desenvolvimento Humano</h3>
-            <p>Cultura organizacional e bem-estar dos membros da liga.</p>
+        <a class="frente-card fc-gold" href="expedientes/" id="eventos">
+          <div class="fc-top">
+            <span class="fc-num">03</span>
+            <span class="fc-arrow">↗</span>
           </div>
-          <div class="go">Ver equipe →</div>
+          <span class="fc-eyebrow">Experiências</span>
+          <h3>Expedientes</h3>
+          <p>Encontros com escritórios, empresas e atividades internas.</p>
         </a>
-        <a class="equipe-card" href="equipe/eventos/">
-          <div>
-            <div class="num">§ IV</div>
-            <h3>Eventos</h3>
-            <p>Organização de expedientes e participação em simpósios.</p>
+        <a class="frente-card" href="conteudos/">
+          <div class="fc-top">
+            <span class="fc-num">04</span>
+            <span class="fc-arrow">↗</span>
           </div>
-          <div class="go">Ver equipe →</div>
+          <span class="fc-eyebrow">Conhecimento</span>
+          <h3>Conteúdos</h3>
+          <p>Produção intelectual, publicações e iniciativas da liga.</p>
         </a>
-        <a class="equipe-card" href="equipe/midias-sociais/">
-          <div>
-            <div class="num">§ V</div>
-            <h3>Mídias Sociais</h3>
-            <p>Presença digital, visibilidade das atividades e posicionamento.</p>
+        <a class="frente-card" href="quem-apoia/">
+          <div class="fc-top">
+            <span class="fc-num">05</span>
+            <span class="fc-arrow">↗</span>
           </div>
-          <div class="go">Ver equipe →</div>
+          <span class="fc-eyebrow">Parcerias</span>
+          <h3>Quem apoia</h3>
+          <p>Parceiros institucionais que fortalecem nossas atividades.</p>
         </a>
-        <a class="equipe-card" href="equipe/pesquisas/">
-          <div>
-            <div class="num">§ VI</div>
-            <h3>Pesquisas</h3>
-            <p>Produção científica — artigos, livro anual e debate acadêmico.</p>
+        <a class="frente-card fc-bordeaux" href="processo-seletivo/" id="selecao">
+          <div class="fc-top">
+            <span class="fc-num">06</span>
+            <span class="fc-arrow">↗</span>
           </div>
-          <div class="go">Ver equipe →</div>
-        </a>
-        <a class="equipe-card" href="equipe/conselheiros/">
-          <div>
-            <div class="num">§ VII</div>
-            <h3>Conselheiros</h3>
-            <p>Aconselham as decisões estratégicas e institucionais da liga.</p>
-          </div>
-          <div class="go">Ver equipe →</div>
+          <span class="fc-eyebrow">Faça parte</span>
+          <h3>Processo Seletivo</h3>
+          <p>Informações para estudantes interessados em integrar a LEDS.</p>
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- EXPEDIENTES (resumo — conteúdo completo em /expedientes/) -->
-  <section id="eventos" style="background:var(--cream-warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-    <div class="wrap-narrow">
-      <div class="marginalia"><span class="num">III.</span>Expedientes</div>
-      <h2>Expedientes Externos e Internos</h2>
-      <p>Encontros nos quais profissionais e professores dialogam com os membros sobre temas de Direito Empresarial e Societário — com <em>escritórios de advocacia</em>, visitas técnicas a <em>empresas</em> e expedientes internos entre os próprios membros.</p>
-      <a class="btn-arrow" href="expedientes/">Ver todos os expedientes</a>
-    </div>
-  </section>
-
-  <!-- CONTEÚDOS (resumo — Instagram + livro anual + iniciativas em /conteudos/) -->
-  <section id="instagram">
-    <div class="wrap-narrow">
-      <div class="marginalia"><span class="num">V.</span>Produção Intelectual</div>
-      <h2>Conteúdos da LEDS</h2>
-      <p>Análises jurídicas publicadas no Instagram, o livro anual da liga e outras iniciativas de pesquisa e capacitação.</p>
-      <a class="btn-arrow" href="conteudos/">Ver conteúdos</a>
-    </div>
-  </section>
-
-  <!-- QUEM APOIA (resumo — página completa em /quem-apoia/) -->
-  <section class="quem-apoia" id="quem-apoia">
-    <div class="wrap-narrow" style="text-align:center;">
-      <div class="marginalia" style="margin-left:auto;margin-right:auto;">
-        <span class="num">VI.</span>Parceiros
-      </div>
-      <h2>Quem apoia a LEDS</h2>
-      <p style="margin:0 auto 28px;">Escritórios e empresas que colaboram com expedientes e visitas técnicas.</p>
-      <a class="btn-arrow" href="quem-apoia/">Ver parceiros</a>
-    </div>
-  </section>
-
-  <!-- PROCESSO SELETIVO (resumo — página completa em /processo-seletivo/) -->
-  <section class="selecao" id="selecao">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="marginalia"><span class="num">IX.</span>Processo Seletivo</div>
-        <h2>Faça parte da LEDS</h2>
-        <p>A cada início de semestre da UFRN, a LEDS abre um <em>novo processo seletivo</em> para estudantes de Direito. Estudantes de outras instituições também podem se inscrever — desde que consigam participar presencialmente das nossas atividades em Natal.</p>
-      </div>
-      <a href="processo-seletivo/" class="btn-ghost-light">Saiba como participar</a>
     </div>
   </section>
 
