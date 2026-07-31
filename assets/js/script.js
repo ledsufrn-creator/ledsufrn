@@ -42,10 +42,11 @@ if (navToggle && navLinks) {
   dropdownTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
       if (window.innerWidth > 860) return;
-      event.preventDefault();
       const dropdown = trigger.parentElement;
-      const isOpen = dropdown.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', String(isOpen));
+      if (dropdown.classList.contains('open')) return;
+      event.preventDefault();
+      dropdown.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
     });
   });
 
