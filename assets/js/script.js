@@ -22,6 +22,11 @@ function closeMobileMenu() {
   navToggle.setAttribute('aria-expanded', 'false');
   navToggle.setAttribute('aria-label', 'Abrir menu');
   document.body.classList.remove('nav-open');
+  navLinks.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => {
+    dropdown.classList.remove('open');
+    const trigger = dropdown.querySelector(':scope > a');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+  });
 }
 
 if (navToggle && navLinks) {
@@ -32,7 +37,22 @@ if (navToggle && navLinks) {
     navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
     document.body.classList.toggle('nav-open', isOpen);
   });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+  const dropdownTriggers = Array.from(navLinks.querySelectorAll('.nav-dropdown > a'));
+  dropdownTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      if (window.innerWidth > 860) return;
+      event.preventDefault();
+      const dropdown = trigger.parentElement;
+      const isOpen = dropdown.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  navLinks.querySelectorAll('a').forEach((a) => {
+    if (dropdownTriggers.includes(a)) return;
+    a.addEventListener('click', closeMobileMenu);
+  });
   window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMobileMenu(); });
 }
 

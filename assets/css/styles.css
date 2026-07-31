@@ -371,10 +371,7 @@ section{padding:120px 0;}
   gap:28px 24px;
 }
 .page-pesquisas .membro-card .membro-info h4{
-  font-size:18px;
-}
-.page-pesquisas .membro-photo{
-  max-height:320px;
+  font-size:17px;
 }
 .membro-photo{
   width:100%;aspect-ratio:4/5;object-fit:cover;
@@ -560,7 +557,7 @@ section{padding:120px 0;}
    Processo Seletivo
    ========================================================================== */
 
-.selecao{background:var(--navy);color:var(--silver);padding-top:72px;}
+.selecao{background:var(--navy);color:var(--silver);padding-top:40px;padding-bottom:72px;}
 .selecao .marginalia{color:var(--gold-light);border-color:rgba(199,171,82,0.3);}
 .selecao .marginalia .num{color:var(--gold-light);}
 .selecao .section-head h2{color:#fff;}
@@ -607,7 +604,7 @@ section{padding:120px 0;}
    Footer
    ========================================================================== */
 
-footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
+footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
 .footer-grid{
   display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;padding-bottom:60px;
   border-bottom:1px solid rgba(189,187,188,0.2);
@@ -971,7 +968,7 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
    ========================================================================== */
 
 .footer-brasao{
-  height:88px;width:auto;display:block;margin-bottom:22px;
+  height:60px;width:auto;display:block;margin-bottom:22px;
   opacity:0.9;
 }
 
@@ -984,33 +981,35 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .section-head{margin-bottom:48px;}
   .nav-links{
     position:fixed;top:64px;left:0;right:0;background:var(--cream);
-    flex-direction:column;padding:28px 32px;gap:22px;
+    flex-direction:column;padding:18px 24px;gap:14px;
     border-bottom:1px solid var(--line);
     transform:translateY(-130%);opacity:0;transition:all .25s ease;
   }
   .nav-links.open{transform:translateY(0);opacity:1;}
   .nav-links > *:not(:first-child):not(.nav-cta)::before{content:none;}
+  .nav-links a{font-size:12.5px;}
   .nav-toggle{display:block;}
   .nav-dropdown-menu{
     position:static;transform:none;opacity:1;visibility:visible;
-    box-shadow:none;border:none;padding:0 0 0 16px;margin-top:10px;
-    display:flex;flex-direction:column;gap:12px;background:transparent;min-width:0;
+    box-shadow:none;border:none;padding:0 0 0 16px;margin-top:8px;
+    display:flex;flex-direction:column;gap:8px;background:transparent;min-width:0;
   }
-  .nav-dropdown-menu a{padding:0;font-size:13px;color:var(--navy-soft);}
+  .nav-dropdown-menu a{padding:0;font-size:12px;color:var(--navy-soft);}
   .hero{grid-template-columns:1fr;padding:150px 0 80px;gap:56px;}
   .sobre-grid{grid-template-columns:1fr;gap:44px;}
   .sobre-grid h2{font-size:clamp(28px,7vw,44px);}
   .preamble{padding:28px 24px;}
-  .equipes-grid{grid-template-columns:1fr;}
-  .equipe-card:nth-child(even){border-left:none;}
+  .equipes-grid{grid-template-columns:1fr;gap:12px;}
+  .equipe-card{padding:18px 18px 16px;gap:10px;}
+  .equipe-card:nth-child(even){border-left:none;padding-left:18px;padding-right:18px;}
+  .equipe-card h3{font-size:18px;}
+  .equipe-card p{font-size:12.5px;}
   .iniciativas-grid{grid-template-columns:1fr;gap:0;}
   .iniciativa-card{border:none;border-bottom:1px solid var(--line);padding:22px 0;}
   .apoia-grid{gap:40px;}
   .membros-grid,
   .equipe-page .membros-grid,
   .page-pesquisas .membros-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
-  .membro-photo,
-  .page-pesquisas .membro-photo{max-height:260px;}
   .conteudos-grid{grid-template-columns:1fr;gap:40px;}
   .footer-grid{grid-template-columns:1fr;gap:40px;}
   .eventos-grid{grid-template-columns:1fr;}
@@ -1018,11 +1017,12 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .selecao-cta{flex-direction:column;align-items:flex-start;}
   .edital-box{flex-direction:column;align-items:flex-start;}
   .evento-card.wide{grid-column:span 1;display:block;}
-  .evento-card.wide .evento-photo{height:auto;aspect-ratio:4/3;min-height:0;}
+  .evento-card.wide .evento-photo{height:auto;aspect-ratio:auto;min-height:0;}
   .iniciativas-grid{grid-template-columns:1fr;}
   .outros-exp-item{grid-template-columns:1fr;gap:6px;}
   .outros-exp{margin-top:48px;padding-top:40px;}
-  .dropcap::first-letter{font-size:4em;}
+  .dropcap::first-letter{font-size:2.6em;}
+  .sobre-grid p{font-size:14.5px;}
   .hero-v2 .wrap{grid-template-columns:1fr;gap:40px;}
   .hero-v2 .brasao-bg{width:340px;right:-100px;top:80px;opacity:0.06;}
   .hero-featured{padding-top:70px;}
@@ -1049,11 +1049,11 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .section-head{margin-bottom:36px;}
   .membros-grid,
   .equipe-page .membros-grid,
-  .page-pesquisas .membros-grid{grid-template-columns:1fr;}
-  .membro-photo,
-  .page-pesquisas .membro-photo{max-height:300px;}
+  .page-pesquisas .membros-grid{grid-template-columns:repeat(2,1fr);gap:24px 14px;}
+  .membro-card h4{font-size:17px;}
+  .membro-role{font-size:9.5px;}
   .selecao-steps{grid-template-columns:1fr;}
-  .ig-grid{grid-template-columns:1fr;}
+  .ig-grid{grid-template-columns:1fr;max-width:190px;margin:0 auto;}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:28px 16px;}
   .stat-num{font-size:clamp(46px,13vw,72px);}
   .page-title{padding-bottom:32px;margin-bottom:32px;}
@@ -1216,17 +1216,18 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
 .frente-selecao{--frente-accent:#8b3d45;}
 
 @media (max-width:860px){
-  .frentes-grid{grid-template-columns:1fr;gap:14px;}
-  .frente-card{min-height:0;padding:24px 54px 24px 22px;grid-template-columns:44px 1fr;gap:14px;}
-  .frente-index{font-size:34px;}
-  .frente-content h3{font-size:25px;}
-  .frente-arrow{right:18px;top:18px;width:30px;height:30px;}
+  .frentes-grid{grid-template-columns:1fr;gap:10px;}
+  .frente-card{min-height:0;padding:16px 44px 16px 16px;grid-template-columns:36px 1fr;gap:10px;}
+  .frente-index{font-size:26px;}
+  .frente-content h3{font-size:20px;}
+  .frente-content p{font-size:12.5px;}
+  .frente-arrow{right:14px;top:14px;width:26px;height:26px;font-size:14px;}
 }
 @media (max-width:520px){
-  .frente-card{grid-template-columns:1fr;padding:22px 50px 22px 22px;}
-  .frente-index{font-size:13px;font-family:var(--mono);letter-spacing:.12em;color:var(--frente-accent);}
-  .frente-kicker{margin-bottom:7px;}
-  .frente-content h3{font-size:23px;margin-bottom:7px;}
+  .frente-card{grid-template-columns:1fr;padding:16px 40px 16px 16px;}
+  .frente-index{font-size:11px;font-family:var(--mono);letter-spacing:.12em;color:var(--frente-accent);}
+  .frente-kicker{margin-bottom:5px;}
+  .frente-content h3{font-size:18px;margin-bottom:5px;}
 }
 
 
@@ -1401,4 +1402,32 @@ footer{background:var(--navy);color:var(--silver);padding:100px 0 44px;}
   .contact-social{min-height:155px;padding:22px;}
   .contact-social-index{font-size:32px;}
   .contact-social strong{font-size:25px;}
+}
+
+/* ==========================================================================
+   Menu mobile — submenus fecham por padrão, abrem só ao clicar
+   (usa #navLinks para garantir prioridade sobre blocos mobile anteriores)
+   ========================================================================== */
+@media (max-width:860px){
+  #navLinks .nav-dropdown > a{
+    position:relative !important;
+    padding-right:24px !important;
+  }
+  #navLinks .nav-dropdown > a::after{
+    content:"";display:block;position:absolute;
+    left:auto;right:4px;top:50%;bottom:auto;margin-top:-5px;
+    width:8px;height:8px;
+    border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+    border-left:none;border-top:none;background:none;
+    transform:rotate(45deg);
+  }
+  #navLinks .nav-dropdown.open > a::after{
+    transform:rotate(225deg);margin-top:-3px;
+  }
+  #navLinks .nav-dropdown-menu{
+    position:static !important;transform:none !important;
+    opacity:1;visibility:visible;
+    display:none;
+  }
+  #navLinks .nav-dropdown.open .nav-dropdown-menu{display:flex;}
 }
