@@ -294,7 +294,7 @@ section{padding:120px 0;}
 }
 .sobre-grid p{color:var(--navy-soft);font-size:16.5px;margin-bottom:18px;line-height:1.7;}
 
-.principios{list-style:none;margin-top:0;}
+.principios{list-style:none;margin-top:0;counter-reset:pn;}
 .principios li{
   padding:22px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--navy-soft);
   line-height:1.6;position:relative;padding-left:38px;
@@ -307,7 +307,6 @@ section{padding:120px 0;}
   font-family:var(--serif);font-style:italic;color:var(--bordeaux);
   font-size:15px;font-weight:500;letter-spacing:0.02em;
 }
-.principios{counter-reset:pn;}
 .principios li b{color:var(--navy);font-weight:600;display:block;margin-bottom:4px;font-family:var(--serif);font-size:18px;}
 
 /* ==========================================================================
@@ -848,7 +847,7 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
    ========================================================================== */
 
 .instagram-section{padding:100px 0;background:var(--cream);}
-.content-panel-head{max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;}
+.content-panel-head{max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px;}
 .content-panel-head .section-head-text{max-width:640px;}
 .content-panel-head .section-head-cta{
   font-family:var(--mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
@@ -918,7 +917,7 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
 .apoia-card:hover{opacity:1;}
 .apoia-card img{max-height:56px;width:auto;filter:grayscale(100%) brightness(0.55);opacity:1;transition:all .3s;}
 .logo-leite-rivas{
-    max-height:46px !important;
+    max-height:60px !important;
     width:auto;
 }
 .apoia-card:hover img{filter:none;mix-blend-mode:normal;}
@@ -1077,7 +1076,6 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
 /* ==========================================================================
    Navegação por páginas e menu mobile — revisão 2026
    ========================================================================== */
-.home-directory{background:var(--cream);border-top:1px solid var(--line);}
 .internal-page{padding-top:64px;}
 .page-intro-wrap{padding-top:24px;}
 
@@ -1122,8 +1120,8 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
    Home — diretório de frentes (visual próprio, distinto dos cards de equipe)
    ========================================================================== */
 .home-directory{
-  position:relative;  background:linear-gradient(180deg,var(--cream) 0%,#eee6d7 100%);
-  overflow:hidden;
+  position:relative;background:linear-gradient(180deg,var(--cream) 0%,#eee6d7 100%);
+  overflow:hidden;border-top:1px solid var(--line);
 }
 .home-directory::before{
   content:"";
@@ -1160,20 +1158,12 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   background:var(--frente-accent);
   opacity:.95;
 }
-.frente-card::after{
-  content:"";
-  position:absolute;right:-34px;bottom:-40px;
-  width:120px;height:120px;border:1px solid color-mix(in srgb,var(--frente-accent) 24%,transparent);
-  transform:rotate(45deg);
-  transition:transform .3s ease, background .3s ease;
-}
 .frente-card:hover{
   transform:translateY(-4px);
   border-color:color-mix(in srgb,var(--frente-accent) 42%,transparent);
   background:linear-gradient(135deg, #fffefb 0%, #f6efe1 100%);
   box-shadow:0 22px 40px -24px rgba(4,44,73,.75);
 }
-.frente-card:hover::after{transform:rotate(45deg) scale(1.04);background:color-mix(in srgb,var(--frente-accent) 6%,transparent);}
 .frente-index{
   font-family:var(--serif);
   font-size:40px;
@@ -1296,7 +1286,6 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
 }
 .content-tab-panel{padding:42px;}
 .content-tab-panel[hidden]{display:none;}
-.content-panel-head{margin-bottom:30px;}
 .content-panel-head h3,
 .content-panel-head-simple h3{
   font-family:var(--serif);
@@ -1408,21 +1397,26 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
    Menu mobile — submenus fecham por padrão, abrem só ao clicar
    (usa #navLinks para garantir prioridade sobre blocos mobile anteriores)
    ========================================================================== */
+.nav-dropdown-toggle{display:none;}
+
 @media (max-width:860px){
+  #navLinks .nav-dropdown{position:relative;}
   #navLinks .nav-dropdown > a{
     position:relative !important;
-    padding-right:24px !important;
+    padding-right:44px !important;
   }
-  #navLinks .nav-dropdown > a::after{
-    content:"";display:block;position:absolute;
-    left:auto;right:4px;top:50%;bottom:auto;margin-top:-5px;
-    width:8px;height:8px;
+  #navLinks .nav-dropdown-toggle{
+    display:block;position:absolute;right:0;top:0;height:50px;
+    width:44px;background:none;border:none;padding:0;margin:0;cursor:pointer;
+  }
+  #navLinks .nav-dropdown-toggle::after{
+    content:"";position:absolute;left:50%;top:50%;
+    width:8px;height:8px;margin:-6px 0 0 -5px;
     border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
-    border-left:none;border-top:none;background:none;
     transform:rotate(45deg);
   }
-  #navLinks .nav-dropdown.open > a::after{
-    transform:rotate(225deg);margin-top:-3px;
+  #navLinks .nav-dropdown.open .nav-dropdown-toggle::after{
+    transform:rotate(225deg);margin-top:-4px;
   }
   #navLinks .nav-dropdown-menu{
     position:static !important;transform:none !important;
