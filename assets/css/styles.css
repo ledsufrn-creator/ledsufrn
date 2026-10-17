@@ -1449,3 +1449,94 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   }
   #navLinks .nav-dropdown.open .nav-dropdown-menu{display:flex;}
 }
+
+/* ==========================================================================
+   REFINO VISUAL (out/2026) — menos enfeite, mais sobriedade
+   Para desfazer: apagar este bloco inteiro.
+   ========================================================================== */
+
+/* Etiquetas pequenas: serifa em versalete, no lugar da fonte de máquina de escrever */
+:root{ --mono: 'EB Garamond', 'Cormorant Garamond', Georgia, serif; }
+
+/* Topo da home: sem malha geométrica, sem triângulos, capa plana */
+.hero-featured::before,
+.hero-featured::after,
+.hf-cover-accent{display:none;}
+.hf-cover{
+  transform:none;
+  box-shadow:0 1px 0 var(--line), 0 18px 40px -30px rgba(4,44,73,.45);
+  border:1px solid var(--line);
+}
+.hf-cover-wrap:hover .hf-cover{transform:none;box-shadow:0 1px 0 var(--line), 0 18px 40px -30px rgba(4,44,73,.45);}
+.hf-cover-badge{box-shadow:none;}
+.hf-eyebrow::before{height:1px;background:var(--gold);}
+
+/* Faixa de atalhos: retas, sem cortes diagonais */
+.hf-bar a{clip-path:none !important;margin-right:0;}
+.hf-bar a + a{border-left:1px solid rgba(199,171,82,.35);}
+.hf-bar a:hover{background:var(--navy-deep);color:var(--gold-light);}
+
+/* Diretório da home: lista sóbria, sem quadriculado, sombras ou cores sortidas */
+.home-directory{background:var(--cream);}
+.home-directory::before{display:none;}
+.frentes-grid{gap:0;border-top:1px solid var(--line-strong);}
+.frente-card,
+.frente-sobre,.frente-equipe,.frente-expedientes,.frente-conteudos,.frente-apoio,.frente-selecao{--frente-accent:var(--navy);}
+.frente-card{
+  border:none;border-bottom:1px solid var(--line-strong);border-radius:0;
+  background:transparent;box-shadow:none;min-height:0;
+  grid-template-columns:1fr;padding:28px 56px 28px 0;
+}
+.frentes-grid .frente-card:nth-child(odd){padding-right:64px;}
+.frentes-grid .frente-card:nth-child(even){padding-left:32px;border-left:1px solid var(--line);}
+.frente-card::before{width:0;background:var(--gold);transition:width .25s ease;}
+.frente-card:hover{transform:none;background:transparent;box-shadow:none;border-color:var(--line-strong);}
+.frente-card:hover::before{width:2px;}
+.frente-index{display:none;}
+.frente-kicker{color:var(--bordeaux);font-size:12px;letter-spacing:.12em;}
+.frente-arrow{border:none;width:auto;height:auto;color:var(--gold);top:30px;}
+.frente-card:hover .frente-arrow{background:none;color:var(--navy);}
+@media (max-width:860px){
+  .frentes-grid .frente-card:nth-child(n){padding:20px 40px 20px 0;border-left:none;}
+}
+
+/* Cards da página Nossa Equipe: retos e sem sombra */
+.equipe-card{
+  border-radius:0;box-shadow:none;background:transparent;
+  border:none;border-top:1px solid var(--line-strong);
+  padding:24px 8px 22px 0;
+}
+.equipe-card:nth-child(even){border-left:none;padding-left:0;}
+.equipes-grid{gap:0 48px;}
+.equipe-card:hover{transform:none;box-shadow:none;background:transparent;border-color:var(--gold);}
+.equipe-card .num{font-size:12px;}
+.equipe-card .go{font-size:12px;}
+
+/* Botões: sem sombra flutuante */
+.nav-links a.nav-cta,.nav-links a.nav-cta:hover{box-shadow:none;transform:none;}
+/* Cabeçalho das páginas internas compacto: o conteúdo aparece já na primeira tela */
+.internal-page,.page-intro-wrap{padding-top:0;}
+.breadcrumb{padding:104px 0 14px;font-size:12px;}
+.page-title .marginalia{display:none;}
+.page-title{padding-bottom:28px;margin-bottom:36px;}
+.page-title h1{font-size:clamp(32px,3.4vw,44px);line-height:1.1;}
+.page-title .lead{margin-top:10px;font-size:16px;max-width:620px;}
+.content-tabs-section{padding-top:8px;border-top:none;}
+@media (max-width:860px){
+  .internal-page,.page-intro-wrap{padding-top:0;}
+  .breadcrumb{padding:88px 0 10px;}
+  .page-title{padding-bottom:22px;margin-bottom:28px;}
+  .page-title h1{font-size:clamp(28px,8vw,36px);}
+  .page-title .lead{font-size:15px;}
+}
+/* Subtítulos de seção proporcionais ao novo título de página */
+.section-head{margin-bottom:40px;}
+.section-head h2{font-size:clamp(26px,2.6vw,34px);}
+.section-head p{margin-top:12px;font-size:15.5px;}
+.section-head-title .cat-tag{display:none;}
+.section-head + .eventos-cat{margin-top:0;padding-top:36px;}
+.eventos-cat{margin-top:40px;padding-top:40px;}
+.eventos-cat-head{margin-bottom:24px;}
+.eventos-cat-head h3{font-size:clamp(22px,2.2vw,28px);}
+.content-tabs-head{display:none;}
+/* FIM — REFINO VISUAL */
