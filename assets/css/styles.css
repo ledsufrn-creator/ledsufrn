@@ -1676,7 +1676,7 @@ footer[style*="margin-top"]{margin-top:72px !important;}
 .contact-primary:hover{background:#5a1c20;}
 .contact-kicker,.contact-social-label{font-size:12px;letter-spacing:.12em;}
 .contact-social-label{color:var(--bordeaux) !important;}
-.contact-primary-body{display:block !important;}
+.contact-primary-body{display:none !important;}
 .contact-primary h2{display:none;}
 .contact-primary p{display:none;}
 .contact-primary-arrow{display:none !important;}
@@ -1704,4 +1704,33 @@ footer[style*="margin-top"]{margin-top:72px !important;}
 .contact-social > *{align-self:flex-start !important;text-align:left;justify-self:start;}
 .content-tab-panel .conteudos-em-construcao{border:none;padding:0 !important;}
 .contact-primary-go{font-size:12.5px;color:rgba(255,255,255,.8);}
+/* Título "Outras iniciativas" de volta (só nessa aba) */
+#panel-iniciativas .content-panel-head-simple{display:block;margin-bottom:16px;}
+#panel-iniciativas .content-panel-head-simple h3{font-size:clamp(22px,2.1vw,28px);}
+#panel-iniciativas .content-panel-number{display:none;}
+
+/* Contato: uma faixa única com três colunas, no mesmo estilo de linhas finas do resto do site */
+.contact-page{padding:48px 0 64px !important;}
+.contact-layout{
+  gap:0 !important;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);
+}
+.contact-primary,.contact-social{
+  background:transparent !important;border:none !important;color:var(--navy) !important;
+  padding:28px 32px 30px !important;gap:8px;
+}
+.contact-primary{padding-left:0 !important;}
+.contact-social{border-left:1px solid var(--line) !important;}
+.contact-primary:hover,.contact-social:hover{background:transparent !important;}
+.contact-kicker{color:var(--bordeaux) !important;}
+.contact-primary strong{color:var(--bordeaux) !important;}
+.contact-primary-go{color:var(--navy-soft) !important;}
+.contact-primary-go,.contact-social-go{margin-top:4px !important;transition:color .2s;}
+.contact-primary:hover .contact-primary-go,.contact-social:hover .contact-social-go{color:var(--navy) !important;text-decoration:underline;text-underline-offset:3px;}
+@media (max-width:860px){
+  .contact-page{padding:32px 0 48px !important;}
+  .contact-primary,.contact-social{padding:20px 0 !important;border-left:none !important;}
+  .contact-social{border-top:1px solid var(--line) !important;}
+}
+.wrap.contact-layout{padding:0 !important;width:calc(100% - 64px);max-width:1116px;}
+@media (max-width:860px){ .wrap.contact-layout{width:calc(100% - 36px);} }
 /* FIM — REFINO VISUAL */
