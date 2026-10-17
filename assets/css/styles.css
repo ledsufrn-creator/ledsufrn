@@ -408,7 +408,9 @@ section{padding:120px 0;}
 .membro-photo-frame{display:none !important;}
 .membro-info{padding-top:0;}
 /* Cards com foto mantida: foto quadrada em cima, currículo embaixo */
-.membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 36px;}
+.membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px;max-width:880px;}
+.membro-card:has(.membro-photo-keep) h4{font-size:19px;}
+.membro-card:has(.membro-photo-keep) p{font-size:12.5px;line-height:1.5;}
 .membro-photo-keep{width:100%;aspect-ratio:1/1;object-position:50% 25%;}
 .membro-photo-keep + .membro-info{padding-top:18px;}
 @media (max-width:900px){
