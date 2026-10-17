@@ -1584,4 +1584,80 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   #panel-instagram{position:relative;}
   #panel-instagram .content-panel-head{position:absolute;top:24px;right:28px;margin:0 !important;}
 }
+/* ---------- Compactação geral: nada maior do que precisa ---------- */
+section{padding:72px 0;}
+.home-directory{padding:64px 0 !important;}
+.section-head{margin-bottom:28px;}
+
+/* Home: topo e números */
+.hero-featured{padding-top:72px;}
+.hero-featured .hf-inner{padding:20px 32px 24px;gap:40px;}
+.hf-cover{width:min(220px,60%);}
+.stats{padding:44px 0 !important;}
+.stats .marginalia{margin-bottom:18px;}
+.stats-grid{gap:32px;}
+.stat-item{padding-top:14px;}
+.stat-num{font-size:clamp(40px,4.4vw,58px);margin-bottom:6px;}
+.stat-num .sub{margin-top:6px;font-size:12px;}
+.stat-label{font-size:11px;}
+.frente-card{padding-top:20px !important;padding-bottom:20px !important;}
+
+/* Rodapé */
+footer{padding:36px 0 24px;}
+.footer-grid{padding-bottom:24px;gap:40px;}
+.footer-brand p{margin-top:12px;font-size:13.5px;}
+.footer-col h5{margin-bottom:12px;}
+.footer-col a,.footer-col p{margin-bottom:6px;font-size:14px;}
+.footer-bottom{padding-top:16px;}
+footer[style*="margin-top"]{margin-top:72px !important;}
+
+/* Sobre */
+.sobre{padding-bottom:64px !important;}
+.sobre-photo{aspect-ratio:21/9;margin:24px 0 0;}
+.sobre-grid{gap:64px;}
+
+/* Expedientes: 3 por linha, fotos mais baixas */
+.eventos-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.evento-card.wide{grid-column:span 3;grid-template-columns:1fr 1fr;}
+.evento-photo{aspect-ratio:16/9;}
+.evento-card.wide .evento-photo{min-height:0;height:100%;max-height:300px;}
+.evento-body h4{font-size:17px;}
+.evento-body p{font-size:13px;}
+#eventos{padding-bottom:64px !important;}
+.internos{padding:56px 0 !important;}
+
+/* Quem apoia, processo seletivo, contato */
+.quem-apoia{padding:48px 0 56px !important;}
+.apoia-grid{gap:56px;padding:8px 0;}
+.selecao{padding-bottom:56px !important;}
+.contact-page{padding-bottom:64px !important;}
+.contact-primary{min-height:0;padding:30px;}
+.contact-social{min-height:0;padding:22px;}
+.content-tabs-section{padding-bottom:56px !important;}
+
+@media (max-width:1000px){
+  .eventos-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .evento-card.wide{grid-column:span 2;}
+}
+@media (max-width:860px){
+  section{padding:48px 0;}
+  .home-directory{padding:44px 0 !important;}
+  .stats{padding:32px 0 !important;}
+  .stat-num{font-size:40px;}
+  .stats-grid{gap:24px 20px;}
+  footer[style*="margin-top"]{margin-top:48px !important;}
+  .footer-grid{gap:20px;}
+}
+@media (max-width:640px){
+  .eventos-grid{grid-template-columns:1fr;}
+  .evento-card.wide{grid-column:auto;grid-template-columns:1fr;}
+  .evento-card.wide .evento-photo{height:auto;aspect-ratio:16/9;}
+}
+.stats .marginalia{margin-bottom:24px !important;}
+@media (max-width:860px){
+  .hf-cover{width:140px;}
+  .hf-cover-wrap{margin-bottom:-8px;}
+  .stats .marginalia{margin-bottom:16px !important;}
+  .stat-label{font-size:10.5px;}
+}
 /* FIM — REFINO VISUAL */
