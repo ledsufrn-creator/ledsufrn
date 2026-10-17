@@ -1660,4 +1660,48 @@ footer[style*="margin-top"]{margin-top:72px !important;}
   .stats .marginalia{margin-bottom:16px !important;}
   .stat-label{font-size:10.5px;}
 }
+/* ---------- Contato: três cartões compactos lado a lado ---------- */
+.contact-page{background:var(--cream) !important;padding:4px 0 56px !important;}
+.contact-page::before,.contact-primary::after{display:none !important;}
+.contact-layout{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:16px;align-items:stretch;}
+.contact-socials{display:contents !important;}
+.contact-primary,.contact-social{
+  min-height:0 !important;padding:20px 22px !important;
+  display:flex !important;flex-direction:column;gap:6px;justify-content:flex-start;
+  transform:none !important;box-shadow:none !important;backdrop-filter:none;
+}
+.contact-primary{background:var(--bordeaux);color:#fff;}
+.contact-social{background:#fff;border:1px solid var(--line-strong) !important;color:var(--navy);}
+.contact-social:hover{background:#fff;border-color:var(--gold) !important;}
+.contact-primary:hover{background:#5a1c20;}
+.contact-kicker,.contact-social-label{font-size:12px;letter-spacing:.12em;}
+.contact-social-label{color:var(--bordeaux) !important;}
+.contact-primary-body{display:block !important;}
+.contact-primary h2{display:none;}
+.contact-primary p{display:none;}
+.contact-primary-arrow{display:none !important;}
+.contact-primary strong,.contact-social strong{font-size:22px !important;line-height:1.2;color:inherit;}
+.contact-social-go{color:var(--navy-soft) !important;font-size:12.5px;margin-top:auto;}
+@media (max-width:860px){
+  .contact-layout{grid-template-columns:1fr !important;gap:12px;}
+  .contact-page{padding-bottom:40px !important;}
+}
+
+/* ---------- Conteúdos: abas Livro e Outras iniciativas ---------- */
+.content-panel-head-simple{display:none;}
+.conteudos-em-construcao{padding:24px 24px !important;max-width:none;text-align:left;}
+.cec-icon{display:none;}
+.conteudos-em-construcao h3{font-size:20px !important;margin-bottom:6px !important;}
+.conteudos-em-construcao p{font-size:14px;}
+.iniciativas-grid{max-width:none;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr));}
+.iniciativa-card{padding:18px 20px !important;}
+.iniciativa-card h4{font-size:18px;margin-bottom:6px;}
+.iniciativa-card p{font-size:13.5px;line-height:1.55;}
+@media (max-width:860px){
+  .iniciativas-grid{grid-template-columns:1fr;gap:0;}
+  .iniciativa-card{padding:16px 0 !important;}
+}
+.contact-social > *{align-self:flex-start !important;text-align:left;justify-self:start;}
+.content-tab-panel .conteudos-em-construcao{border:none;padding:0 !important;}
+.contact-primary-go{font-size:12.5px;color:rgba(255,255,255,.8);}
 /* FIM — REFINO VISUAL */
