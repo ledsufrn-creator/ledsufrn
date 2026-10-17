@@ -410,12 +410,12 @@ section{padding:120px 0;}
 /* Cards com foto mantida: foto pequena ao lado do texto, tudo visível sem rolar */
 .membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 48px;}
 .membro-card:has(.membro-photo-keep){flex-direction:row;align-items:flex-start;gap:24px;}
-.membro-photo-keep{width:180px;flex-shrink:0;}
+.membro-photo-keep{width:220px;flex-shrink:0;}
 .membro-photo-keep + .membro-info{padding-top:0;}
 @media (max-width:760px){
   .membros-grid:has(.membro-photo-keep){grid-template-columns:1fr;gap:32px;}
   .membro-card:has(.membro-photo-keep){gap:16px;}
-  .membro-photo-keep{width:112px;}
+  .membro-photo-keep{width:124px;}
 }
 /* FIM — fotos dos membros escondidas */
 
