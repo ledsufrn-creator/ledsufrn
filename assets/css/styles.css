@@ -407,7 +407,16 @@ section{padding:120px 0;}
 .membro-photo:not(.membro-photo-keep),
 .membro-photo-frame{display:none !important;}
 .membro-info{padding-top:0;}
-.membro-photo-keep + .membro-info{padding-top:18px;}
+/* Cards com foto mantida: foto pequena ao lado do texto, tudo visível sem rolar */
+.membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 48px;}
+.membro-card:has(.membro-photo-keep){flex-direction:row;align-items:flex-start;gap:24px;}
+.membro-photo-keep{width:150px;flex-shrink:0;}
+.membro-photo-keep + .membro-info{padding-top:0;}
+@media (max-width:760px){
+  .membros-grid:has(.membro-photo-keep){grid-template-columns:1fr;gap:32px;}
+  .membro-card:has(.membro-photo-keep){gap:16px;}
+  .membro-photo-keep{width:104px;}
+}
 /* FIM — fotos dos membros escondidas */
 
 /* subhead que separa grupos dentro de uma equipe */
