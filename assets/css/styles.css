@@ -407,15 +407,16 @@ section{padding:120px 0;}
 .membro-photo:not(.membro-photo-keep),
 .membro-photo-frame{display:none !important;}
 .membro-info{padding-top:0;}
-/* Cards com foto mantida: foto pequena ao lado do texto, tudo visível sem rolar */
-.membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 48px;}
-.membro-card:has(.membro-photo-keep){flex-direction:row;align-items:flex-start;gap:24px;}
-.membro-photo-keep{width:220px;flex-shrink:0;}
-.membro-photo-keep + .membro-info{padding-top:0;}
-@media (max-width:760px){
-  .membros-grid:has(.membro-photo-keep){grid-template-columns:1fr;gap:32px;}
-  .membro-card:has(.membro-photo-keep){gap:16px;}
-  .membro-photo-keep{width:124px;}
+/* Cards com foto mantida: foto quadrada em cima, currículo embaixo */
+.membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 36px;}
+.membro-photo-keep{width:100%;aspect-ratio:1/1;object-position:50% 25%;}
+.membro-photo-keep + .membro-info{padding-top:18px;}
+@media (max-width:900px){
+  .membros-grid:has(.membro-photo-keep){grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:600px){
+  .membros-grid:has(.membro-photo-keep){grid-template-columns:1fr;gap:36px;}
+  .membro-photo-keep{max-width:260px;}
 }
 /* FIM — fotos dos membros escondidas */
 
