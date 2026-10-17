@@ -405,10 +405,7 @@ section{padding:120px 0;}
    -------------------------------------------------------------------------- */
 .membro-photo,
 .membro-photo-frame{display:none !important;}
-.membro-info{
-  padding-top:18px;
-  border-top:2px solid var(--gold);
-}
+.membro-info{padding-top:0;}
 /* FIM — fotos dos membros escondidas */
 
 /* subhead que separa grupos dentro de uma equipe */
