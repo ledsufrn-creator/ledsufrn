@@ -1553,4 +1553,12 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   .sobre-grid h2{font-size:24px;}
   .page-title + .membros-subhead, .page-title + .membros-grid, .page-title + .equipes-grid{margin-top:36px;}
 }
+/* "A" capitular do Sobre: removida (ficava desproporcional) */
+.dropcap::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}
+
+/* Contato: cartão principal sem título gigante nem enfeites, números 01/02 removidos */
+.contact-primary h2{font-size:clamp(26px,2.6vw,34px);line-height:1.1;}
+.contact-primary::before,.contact-primary::after{display:none;}
+.contact-social-index{display:none;}
+.contact-social{grid-template-columns:1fr !important;}
 /* FIM — REFINO VISUAL */
