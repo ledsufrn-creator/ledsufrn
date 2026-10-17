@@ -398,6 +398,19 @@ section{padding:120px 0;}
   filter:none;
 }
 
+/* --------------------------------------------------------------------------
+   FOTOS DOS MEMBROS ESCONDIDAS (temporário — out/2026)
+   As fotos continuam em assets/images/ e nos arquivos de cada página.
+   Para MOSTRAR as fotos de novo: apague este bloco inteiro (até "FIM").
+   -------------------------------------------------------------------------- */
+.membro-photo,
+.membro-photo-frame{display:none !important;}
+.membro-info{
+  padding-top:18px;
+  border-top:2px solid var(--gold);
+}
+/* FIM — fotos dos membros escondidas */
+
 /* subhead que separa grupos dentro de uma equipe */
 .membros-subhead{
   font-family:var(--serif);font-style:italic;color:var(--navy);font-size:22px;
