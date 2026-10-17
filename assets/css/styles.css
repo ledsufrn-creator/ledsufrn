@@ -402,10 +402,12 @@ section{padding:120px 0;}
    FOTOS DOS MEMBROS ESCONDIDAS (temporário — out/2026)
    As fotos continuam em assets/images/ e nos arquivos de cada página.
    Para MOSTRAR as fotos de novo: apague este bloco inteiro (até "FIM").
-   -------------------------------------------------------------------------- */
-.membro-photo,
+   (Exceção: fotos com a classe "membro-photo-keep" — orientadores e
+   coordenadora geral — continuam aparecendo.) */
+.membro-photo:not(.membro-photo-keep),
 .membro-photo-frame{display:none !important;}
 .membro-info{padding-top:0;}
+.membro-photo-keep + .membro-info{padding-top:18px;}
 /* FIM — fotos dos membros escondidas */
 
 /* subhead que separa grupos dentro de uma equipe */
