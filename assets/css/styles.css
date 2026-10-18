@@ -1721,4 +1721,13 @@ footer[style*="margin-top"]{margin-top:72px !important;}
 }
 /* Cards da home e de Nossa Equipe no estilo original (fonte das etiquetas inclusive) */
 .frente-kicker,.equipe-card .num,.equipe-card .go{font-family:'JetBrains Mono',ui-monospace,monospace;}
+/* Quando a seção seguinte muda de cor, o topo ganha respiro antes da junção */
+.page-intro-wrap:has(+ .selecao) .page-title,
+.page-intro-wrap:has(+ .sobre) .page-title{padding-bottom:36px !important;}
+.page-intro-wrap + .selecao{padding-top:44px !important;}
+@media (max-width:860px){
+  .page-intro-wrap:has(+ .selecao) .page-title,
+  .page-intro-wrap:has(+ .sobre) .page-title{padding-bottom:28px !important;}
+  .page-intro-wrap + .selecao{padding-top:32px !important;}
+}
 /* FIM — REFINO VISUAL */
