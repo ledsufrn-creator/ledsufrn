@@ -1730,4 +1730,6 @@ footer[style*="margin-top"]{margin-top:72px !important;}
   .page-intro-wrap:has(+ .sobre) .page-title{padding-bottom:28px !important;}
   .page-intro-wrap + .selecao{padding-top:32px !important;}
 }
+/* Texto de apresentação do topo das páginas: ocupa a largura toda */
+.page-title .lead{max-width:none !important;}
 /* FIM — REFINO VISUAL */
