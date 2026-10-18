@@ -1476,42 +1476,6 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
 .hf-bar a + a{border-left:1px solid rgba(199,171,82,.35);}
 .hf-bar a:hover{background:var(--navy-deep);color:var(--gold-light);}
 
-/* Diretório da home: lista sóbria, sem quadriculado, sombras ou cores sortidas */
-.home-directory{background:var(--cream);}
-.home-directory::before{display:none;}
-.frentes-grid{gap:0;border-top:1px solid var(--line-strong);}
-.frente-card,
-.frente-sobre,.frente-equipe,.frente-expedientes,.frente-conteudos,.frente-apoio,.frente-selecao{--frente-accent:var(--navy);}
-.frente-card{
-  border:none;border-bottom:1px solid var(--line-strong);border-radius:0;
-  background:transparent;box-shadow:none;min-height:0;
-  grid-template-columns:1fr;padding:28px 56px 28px 0;
-}
-.frentes-grid .frente-card:nth-child(odd){padding-right:64px;}
-.frentes-grid .frente-card:nth-child(even){padding-left:32px;border-left:1px solid var(--line);}
-.frente-card::before{width:0;background:var(--gold);transition:width .25s ease;}
-.frente-card:hover{transform:none;background:transparent;box-shadow:none;border-color:var(--line-strong);}
-.frente-card:hover::before{width:2px;}
-.frente-index{display:none;}
-.frente-kicker{color:var(--bordeaux);font-size:12px;letter-spacing:.12em;}
-.frente-arrow{border:none;width:auto;height:auto;color:var(--gold);top:30px;}
-.frente-card:hover .frente-arrow{background:none;color:var(--navy);}
-@media (max-width:860px){
-  .frentes-grid .frente-card:nth-child(n){padding:20px 40px 20px 0;border-left:none;}
-}
-
-/* Cards da página Nossa Equipe: retos e sem sombra */
-.equipe-card{
-  border-radius:0;box-shadow:none;background:transparent;
-  border:none;border-top:1px solid var(--line-strong);
-  padding:24px 8px 22px 0;
-}
-.equipe-card:nth-child(even){border-left:none;padding-left:0;}
-.equipes-grid{gap:0 48px;}
-.equipe-card:hover{transform:none;box-shadow:none;background:transparent;border-color:var(--gold);}
-.equipe-card .num{font-size:12px;}
-.equipe-card .go{font-size:12px;}
-
 /* Botões: sem sombra flutuante */
 .nav-links a.nav-cta,.nav-links a.nav-cta:hover{box-shadow:none;transform:none;}
 /* Cabeçalho das páginas internas compacto: o conteúdo aparece já na primeira tela */
@@ -1600,7 +1564,6 @@ section{padding:72px 0;}
 .stat-num{font-size:clamp(40px,4.4vw,58px);margin-bottom:6px;}
 .stat-num .sub{margin-top:6px;font-size:12px;}
 .stat-label{font-size:11px;}
-.frente-card{padding-top:20px !important;padding-bottom:20px !important;}
 
 /* Rodapé */
 footer{padding:36px 0 24px;}
@@ -1751,12 +1714,11 @@ footer[style*="margin-top"]{margin-top:72px !important;}
 .eventos-cat{margin-top:28px !important;padding-top:28px !important;}
 .eventos-cat-head{margin-bottom:16px !important;}
 /* Nossa Equipe: itens da lista mais baixos */
-.equipe-card{padding:16px 8px 16px 0 !important;gap:8px !important;}
-.equipe-card .num{margin-bottom:2px;}
-.equipe-card h3{margin-bottom:4px;}
 .membros-subhead{margin:36px 0 16px !important;padding-top:20px !important;}
 @media (max-width:860px){
   .page-intro-wrap + section{padding-top:24px !important;}
   .page-title + .membros-subhead,.page-title + .membros-grid,.page-title + .equipes-grid{margin-top:24px !important;}
 }
+/* Cards da home e de Nossa Equipe no estilo original (fonte das etiquetas inclusive) */
+.frente-kicker,.equipe-card .num,.equipe-card .go{font-family:'JetBrains Mono',ui-monospace,monospace;}
 /* FIM — REFINO VISUAL */
