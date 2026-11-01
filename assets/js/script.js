@@ -81,8 +81,8 @@ if (navToggle && navLinks) {
       subtitle: 'Conectamos estudantes de Direito ao universo do Direito Societário e Empresarial — expedientes com escritórios, visitas técnicas a empresas e produção científica.',
       ctaText: 'Conheça a liga',
       ctaHref: '/sobre/',
-      cover: 'assets/images/post-cazetv-globo.webp',
-      coverAlt: 'Copa do Mundo, Contratos e Streaming — caso CazéTV e Globo',
+      cover: 'assets/images/post-ma-warner.webp',
+      coverAlt: 'M&A na prática: o que a disputa Warner nos ensina? Netflix x Paramount',
       badge: '@ledsufrn',
     },
     {
