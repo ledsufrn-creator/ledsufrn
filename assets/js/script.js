@@ -76,14 +76,14 @@ if (navToggle && navLinks) {
 (function () {
   const slides = [
     {
-      category: 'Projeto de Pesquisa e Extensão',
-      title: 'A prática do Direito Empresarial<br><em>começa na sala de aula.</em>',
-      subtitle: 'Conectamos estudantes de Direito ao universo do Direito Societário e Empresarial — expedientes com escritórios, visitas técnicas a empresas e produção científica.',
-      ctaText: 'Conheça a liga',
-      ctaHref: '/sobre/',
+      category: 'M&A · Direito Societário',
+      title: 'M&A na prática: o que a<br><em>disputa Warner nos ensina?</em>',
+      subtitle: 'Netflix e Paramount disputaram a aquisição da Warner Bros. Discovery — um caso real sobre estratégia, estrutura contratual e os interesses em jogo numa operação de M&A.',
+      ctaText: 'Ver no Instagram',
+      ctaHref: 'https://www.instagram.com/p/DchHL59D04B/',
       cover: 'assets/images/post-ma-warner.webp',
       coverAlt: 'M&A na prática: o que a disputa Warner nos ensina? Netflix x Paramount',
-      badge: '@ledsufrn',
+      badge: 'Caso real',
     },
     {
       category: 'Fundos de Investimento · CVM',
