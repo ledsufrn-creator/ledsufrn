@@ -365,13 +365,6 @@ section{padding:120px 0;}
   min-width:0;
 }
 .equipe-page .membros-grid,
-.page-pesquisas .membros-grid{
-  grid-template-columns:repeat(4, minmax(0, 1fr));
-  gap:28px 24px;
-}
-.page-pesquisas .membro-card .membro-info h4{
-  font-size:17px;
-}
 .membro-photo{
   width:100%;aspect-ratio:4/5;object-fit:cover;
   background:var(--navy-soft);
@@ -1032,7 +1025,6 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   .apoia-grid{gap:40px;}
   .membros-grid,
   .equipe-page .membros-grid,
-  .page-pesquisas .membros-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px;}
   .conteudos-grid{grid-template-columns:1fr;gap:40px;}
   .footer-grid{grid-template-columns:1fr;gap:40px;}
   .eventos-grid{grid-template-columns:1fr;}
@@ -1072,7 +1064,6 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   .section-head{margin-bottom:36px;}
   .membros-grid,
   .equipe-page .membros-grid,
-  .page-pesquisas .membros-grid{grid-template-columns:repeat(2,1fr);gap:24px 14px;}
   .membro-card h4{font-size:17px;}
   .membro-role{font-size:9.5px;}
   .selecao-steps{grid-template-columns:1fr;}
