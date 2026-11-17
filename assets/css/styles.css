@@ -414,6 +414,9 @@ section{padding:120px 0;}
   .membro-photo-keep{max-width:260px;}
 }
 /* FIM — fotos dos membros escondidas */
+/* Assessores (cards sem rótulo de cargo): nome um pouco menor que o dos coordenadores */
+.membro-info h4:first-child{font-size:18px;}
+@media (max-width:600px){ .membro-info h4:first-child{font-size:16px;} }
 
 /* subhead que separa grupos dentro de uma equipe */
 .membros-subhead{
