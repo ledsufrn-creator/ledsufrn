@@ -1222,12 +1222,8 @@ footer{background:var(--navy);color:var(--silver);padding:40px 0 44px;}
   transition:background .2s,color .2s,transform .2s;
 }
 .frente-card:hover .frente-arrow{background:var(--frente-accent);color:#fff;transform:translate(2px,-2px);}
-.frente-sobre{--frente-accent:var(--bordeaux);}
-.frente-equipe{--frente-accent:var(--navy);}
-.frente-expedientes{--frente-accent:#8b6a23;}
-.frente-conteudos{--frente-accent:#315e52;}
-.frente-apoio{--frente-accent:#66547a;}
-.frente-selecao{--frente-accent:#8b3d45;}
+/* Todas as frentes na paleta LEDS: azul-marinho, com detalhe dourado no rótulo */
+.frente-kicker{color:var(--gold);}
 
 @media (max-width:860px){
   .frentes-grid{grid-template-columns:1fr;gap:10px;}
